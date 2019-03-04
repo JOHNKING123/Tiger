@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/tg_config/pom.xml" />
+        <option value="$PROJECT_DIR$/tg_client1/pom.xml" />
+        <option value="$PROJECT_DIR$/tg-discovery/pom.xml" />
       </list>
     </option>
   </component>

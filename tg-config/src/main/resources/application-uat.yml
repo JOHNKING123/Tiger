@@ -1,0 +1,8 @@
+
+spring:
+  rabbitmq:
+    host: 47.105.143.13
+    port: 5672
+    username: jobs
+    password: 123456
+    virtual-host: /vconfig-uat

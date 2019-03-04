@@ -1,0 +1,35 @@
+## 禁用重试调用功能
+## feign 是在ribbon 和 hystrix 基础上封装的，所以ribbon的超时也是feign 的超时
+timeout:
+  connect: 300
+  read: 12000
+
+ribbon:
+  ConnectTimeout: ${timeout.connect}
+  ReadTimeout: ${timeout.read}
+  OkToRetryOnAllOperations: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ServerListRefreshInterval: 1000
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:9182/eureka/
+
+
+spring:
+  rabbitmq:
+    host: 47.105.143.13
+    port: 5672
+    username: jobs
+    password: 123456
+    virtual-host: /vconfig-uat
+
+
+
+
+

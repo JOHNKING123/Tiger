@@ -1,0 +1,34 @@
+#https://cloud.spring.io/spring-cloud-config/single/spring-cloud-config.html#_git_ssh_configuration_using_properties
+
+spring:
+  application:
+    name: tg-config
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+        git:
+#          uri: ssh://git@code.yoorstore.com:10022/yoorstore-ops/configuration.git
+          uri: https://github.com/JOHNKING123/tiger_ops.git
+          username: ${GIT_USER:JOHNKING123}
+          password: ${GIT_PASS:chuqiang1994}
+          searchPaths: tiger
+          force-pull: true
+          clone-on-start: false  # 这里不用true, 这个版本的config server貌似有issue, 为true时，在afterPropertiesSet里就会触发git目录的删除再重新获取，并发消息时可能会冲突
+          default-label: milestone-2.0
+
+  profiles:
+     active: ${config.profile:uat,native}
+
+server:
+  port: 9181
+
+
+
+management:
+  context-path: /manager   #actuator暴露接口的前缀
+  security:
+    enabled: false   #actuator是否需要安全保证
+
+

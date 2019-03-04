@@ -1,0 +1,17 @@
+server:
+  port: 9182
+
+# eureka 单点
+eureka:
+  server:
+    enable-self-preservation: false  # 关闭自我保护功能
+    eviction-interval-timer-in-ms: 1000  # 刷新频率修改,单位(ms)
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+  instance:
+    prefer-ip-address: true
