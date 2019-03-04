@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tg-client1" />
+        <module name="tg-client1-api" />
+        <module name="tg-client2" />
         <module name="tg-config" />
         <module name="tg-discovery" />
         <module name="tg_client1" />
@@ -15,6 +17,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="tg-client1" target="1.7" />
+      <module name="tg-client1-api" target="1.7" />
+      <module name="tg-client2" target="1.7" />
       <module name="tg-config" target="1.7" />
       <module name="tg-discovery" target="1.7" />
       <module name="tg-parent" target="1.7" />

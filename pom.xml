@@ -13,7 +13,7 @@
     <module>tg-config</module>
     <module>tg-discovery</module>
     <module>tg-client1</module>
-
+    <module>tg-client1-api</module>
   </modules>
 
   <name>Tiger</name>

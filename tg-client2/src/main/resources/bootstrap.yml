@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: tg-client2
+  cloud:
+    config:
+      uri: http://config:9181
+      fail-fast: false
+      profile: ${config.profile:uat}
+
+  profiles:
+    active: ${config.profile:uat}
