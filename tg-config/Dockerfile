@@ -9,6 +9,8 @@ ENV HTTP_PORT=${DEFAULT_PORT} \
 
 WORKDIR /app
 
+run echo ${JAR_FILE}
+
 COPY ${JAR_FILE} /app/app.jar
 
 VOLUME $DATAS
