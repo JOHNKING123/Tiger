@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/tg_client1/pom.xml" />
         <option value="$PROJECT_DIR$/tg-discovery/pom.xml" />
         <option value="$PROJECT_DIR$/tg-client2/pom.xml" />
+        <option value="$PROJECT_DIR$/tg-gateway/pom.xml" />
       </list>
     </option>
   </component>

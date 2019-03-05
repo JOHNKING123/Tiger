@@ -1,0 +1,37 @@
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  retryable: false
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 500
+    socket-timeout-millis: 20000
+
+  routes:
+    tg-client1:
+      path: /api/tg-client1/**
+      serviceId: tg-client1
+      stripPrefix: false
+      sensitiveHeaders:
+    tg-client2:
+      path: /api/tg-client2/**
+      serviceId: tg-client2
+      stripPrefix: false
+      sensitiveHeaders:
+server:
+  port: 9888
+
+zuulfilter:
+  accesslog: false
+  errorlog: true

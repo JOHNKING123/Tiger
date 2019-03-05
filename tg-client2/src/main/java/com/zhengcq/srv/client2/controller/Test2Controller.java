@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/test2")
+@RequestMapping("/api/tg-client2/test2")
 public class Test2Controller {
 
     @Autowired

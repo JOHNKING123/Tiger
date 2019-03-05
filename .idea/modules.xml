@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/tg-client2/tg-client2.iml" filepath="$PROJECT_DIR$/tg-client2/tg-client2.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-config/tg-config.iml" filepath="$PROJECT_DIR$/tg-config/tg-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-discovery/tg-discovery.iml" filepath="$PROJECT_DIR$/tg-discovery/tg-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tg-gateway/tg-gateway.iml" filepath="$PROJECT_DIR$/tg-gateway/tg-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-parent/tg-parent.iml" filepath="$PROJECT_DIR$/tg-parent/tg-parent.iml" />
     </modules>
   </component>

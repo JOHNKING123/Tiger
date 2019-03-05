@@ -11,6 +11,7 @@
         <module name="tg-client2" />
         <module name="tg-config" />
         <module name="tg-discovery" />
+        <module name="tg-gateway" />
         <module name="tg_client1" />
         <module name="tg_config" />
       </profile>
@@ -21,6 +22,7 @@
       <module name="tg-client2" target="1.7" />
       <module name="tg-config" target="1.7" />
       <module name="tg-discovery" target="1.7" />
+      <module name="tg-gateway" target="1.7" />
       <module name="tg-parent" target="1.7" />
       <module name="tg_client1" target="1.7" />
       <module name="tg_config" target="1.7" />
