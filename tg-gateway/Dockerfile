@@ -3,7 +3,7 @@ MAINTAINER    zheng.cq
 
 USER root
 ARG JAR_FILE=undefined.jar
-ARG DEFAULT_PORT=9184
+ARG DEFAULT_PORT=9888
 
 ENV HTTP_PORT=${DEFAULT_PORT} \
     DATAS=/app/data
