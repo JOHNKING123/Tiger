@@ -23,6 +23,7 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <spring-cloud.version>Dalston.SR4</spring-cloud.version>
+        <logstash-logback-encode.version>4.11</logstash-logback-encode.version>
     </properties>
 
     <dependencies>
@@ -32,6 +33,7 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -90,6 +92,11 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback-encode.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

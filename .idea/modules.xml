@@ -3,9 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tiger.iml" filepath="$PROJECT_DIR$/Tiger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tg-common/core-server/core-server.iml" filepath="$PROJECT_DIR$/tg-common/core-server/core-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-logging/service-logging.iml" filepath="$PROJECT_DIR$/service-logging/service-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-client1/tg-client1.iml" filepath="$PROJECT_DIR$/tg-client1/tg-client1.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-client1-api/tg-client1-api.iml" filepath="$PROJECT_DIR$/tg-client1-api/tg-client1-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-client2/tg-client2.iml" filepath="$PROJECT_DIR$/tg-client2/tg-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tg-common/tg-common.iml" filepath="$PROJECT_DIR$/tg-common/tg-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-config/tg-config.iml" filepath="$PROJECT_DIR$/tg-config/tg-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-discovery/tg-discovery.iml" filepath="$PROJECT_DIR$/tg-discovery/tg-discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-gateway/tg-gateway.iml" filepath="$PROJECT_DIR$/tg-gateway/tg-gateway.iml" />

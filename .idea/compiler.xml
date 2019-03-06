@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core-server" />
+        <module name="service-logging" />
         <module name="tg-client1" />
         <module name="tg-client1-api" />
         <module name="tg-client2" />
@@ -14,12 +16,16 @@
         <module name="tg-gateway" />
         <module name="tg_client1" />
         <module name="tg_config" />
+        <module name="tgcommon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="core-server" target="1.7" />
+      <module name="service-logging" target="1.7" />
       <module name="tg-client1" target="1.7" />
       <module name="tg-client1-api" target="1.7" />
       <module name="tg-client2" target="1.7" />
+      <module name="tg-common" target="1.7" />
       <module name="tg-config" target="1.7" />
       <module name="tg-discovery" target="1.7" />
       <module name="tg-gateway" target="1.7" />
@@ -27,6 +33,7 @@
       <module name="tg_client1" target="1.7" />
       <module name="tg_config" target="1.7" />
       <module name="tg_parent" target="1.7" />
+      <module name="tgcommon" target="1.7" />
       <module name="Tiger" target="1.8" />
     </bytecodeTargetLevel>
   </component>
