@@ -2,8 +2,6 @@ FROM         docker.io/fabric8/java-centos-openjdk8-jdk:latest
 MAINTAINER    zheng.cq
 
 USER root
-RUN /sbin/ip route|awk '/default/ { print  $3,"\tconfig" }' >> /etc/hosts
-RUN /sbin/ip route|awk '/default/ { print  $3,"\tdiscovery" }' >> /etc/hosts
 ARG JAR_FILE=undefined.jar
 ARG DEFAULT_PORT=9182
 
