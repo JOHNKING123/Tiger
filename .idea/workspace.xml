@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dbd2f32-3dcb-4009-8a5c-6a46a8143b3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/target/classes/com/zhengcq/App.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/target/test-classes/com/zhengcq/AppTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/target/classes/com/zhengcq/core/server/base/BaseController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/target/test-classes/com/zhengcq/AppTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_logstash_logback_logstash_logback_encoder_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/all/tg-client1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/all/tg-client1.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/service-logging.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/src/main/java/com/zhengcq/App.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/src/main/resources/common-include.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/src/main/resources/logback-base.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/src/test/java/com/zhengcq/AppTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/target/classes/common-include.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service-logging/target/classes/logback-base.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-client1/src/main/resources/logback-spring.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/core-server.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/src/main/java/com/zhengcq/core/server/base/BaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-server/src/test/java/com/zhengcq/AppTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/tg-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1-api/target/classes/com/zhengcq/srv/client1/TestService.class" afterPath="$PROJECT_DIR$/tg-client1-api/target/classes/com/zhengcq/srv/client1/TestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1/pom.xml" afterPath="$PROJECT_DIR$/tg-client1/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" afterPath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-parent/pom.xml" afterPath="$PROJECT_DIR$/tg-parent/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,17 +54,7 @@
         <entry file="file://$PROJECT_DIR$/service-logging/src/main/resources/logback-base.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tg-client1/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -102,28 +63,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="230">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/pom.xml">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,28 +86,6 @@
             <state relative-caret-position="345">
               <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-server/src/main/java/com/zhengcq/core/server/base/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="77" lean-forward="false" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -253,8 +182,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/tg-common/core-server/src/main/java/com/zhengcq/core/server/Test.java" />
         <option value="$PROJECT_DIR$/tg-common/core-server/src/main/java/com/zhengcq/core/server/base/BaseController.java" />
-        <option value="$PROJECT_DIR$/tg-client1/pom.xml" />
         <option value="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/tg-client1/pom.xml" />
       </list>
     </option>
   </component>
@@ -323,54 +252,7 @@
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
               <item name="service-logging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="tg-parent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
@@ -431,11 +313,11 @@
       <recent name="com.zhengcq.srv.client1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\service-logging" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common\core-server" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger" />
       <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-client1\src\main\resources" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-gateway" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-client1" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-client2" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-discovery" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zhengcq.srv.discovery" />
@@ -680,12 +562,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551424472832</updated>
       <workItem from="1551424477254" duration="6961000" />
-      <workItem from="1551666657581" duration="47547000" />
+      <workItem from="1551666657581" duration="47983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54508000" />
+    <option name="totallyTimeSpent" value="54944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -770,38 +652,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tg-client2/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-config/src/main/java/com/zhengcq/srv/config/TgConfigApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-discovery/src/main/java/com/zhengcq/srv/discovery/TgDiscoveryApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/TgClient1Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tg-config/src/main/resources/shared/tg-client2-uat.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1125,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/all/tg-client1.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1165,6 +1007,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/core-server/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-logging/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-client1/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-logging/src/main/resources/logback-base.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service-logging/src/main/resources/common-include.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1051">
@@ -1173,15 +1055,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-logging/src/main/resources/logback-base.xml">
+    <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="230">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/.gitignore">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
