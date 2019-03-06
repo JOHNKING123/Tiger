@@ -2,7 +2,7 @@ FROM         docker.io/fabric8/java-centos-openjdk8-jdk:latest
 MAINTAINER    zheng.cq
 
 ARG JAR_FILE=undefined.jar
-ARG DEFAULT_PORT=9182
+ARG DEFAULT_PORT=9183
 
 ENV HTTP_PORT=${DEFAULT_PORT} \
     DATAS=/app/data
@@ -16,4 +16,4 @@ COPY ${JAR_FILE} /app/app.jar
 VOLUME $DATAS
 EXPOSE $HTTP_PORT
 
-CMD ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT java -jar /app/app.jar >> /app/run.log
