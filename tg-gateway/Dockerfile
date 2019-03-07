@@ -17,4 +17,4 @@ COPY ${JAR_FILE} /app/app.jar
 VOLUME $DATAS
 EXPOSE $HTTP_PORT
 
-ENTRYPOINT java -jar /app/app.jar >> /app/run.log
+ENTRYPOINT java -jar /app/app.jar

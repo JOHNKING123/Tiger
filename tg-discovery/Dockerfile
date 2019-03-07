@@ -1,4 +1,4 @@
-FROM         docker.io/fabric8/java-centos-openjdk8-jdk:latest
+FROM         johnking123/jdk8:1.0.1
 MAINTAINER    zheng.cq
 
 USER root
@@ -17,4 +17,4 @@ COPY ${JAR_FILE} /app/app.jar
 VOLUME $DATAS
 EXPOSE $HTTP_PORT
 
-ENTRYPOINT java -jar /app/app.jar >> /app/run.log
+ENTRYPOINT java -jar /app/app.jar
