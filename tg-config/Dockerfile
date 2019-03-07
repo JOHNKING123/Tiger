@@ -1,4 +1,4 @@
-FROM         docker.io/fabric8/java-centos-openjdk8-jdk:latest
+FROM         johnking123/jdk8:1.0.1
 MAINTAINER    zheng.cq
 
 ARG JAR_FILE=./target/tg-config-1.0-SNAPSHOT.jar
