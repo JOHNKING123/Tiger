@@ -16,6 +16,7 @@
     <name>tg-common</name>
     <modules>
         <module>core-server</module>
+        <module>core-common</module>
     </modules>
 
 

@@ -1,4 +1,4 @@
-package com.zhengcq.srv.client1;
+package com.zhengcq;
 
 import static org.junit.Assert.assertTrue;
 

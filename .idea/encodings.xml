@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/tg-client1-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tg-client2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tg-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tg-common/core-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tg-common/core-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tg-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tg-discovery" charset="UTF-8" />
