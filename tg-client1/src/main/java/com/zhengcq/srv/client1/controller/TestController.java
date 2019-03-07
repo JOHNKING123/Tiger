@@ -19,7 +19,11 @@ public class TestController extends BaseController implements TestService {
     @GetMapping("/hello")
     public String hello(){
 
-        logger.warn("test test");
+        logger.warn("test test warn");
+        logger.info("test test info");
+
+        logger.debug("test test debug");
+        logger.error("test test error");
         return userName;
     }
 }
