@@ -20,6 +20,9 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery:9182/eureka/
 
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+
 
 spring:
   rabbitmq:
@@ -28,6 +31,17 @@ spring:
     username: jobs
     password: 123456
     virtual-host: /vconfig-uat
+
+  datasource:
+    url: jdbc:mysql://121.196.248.33:3306/tiger?characterEncoding=utf8&allowMultiQueries=true
+    username: tiger
+    password: Tiger1994
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxActive: 5
+    initialSize: 1
+    minIdle: 1
+    filters: stat,slf4j
 
 
 

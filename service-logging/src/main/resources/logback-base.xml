@@ -34,7 +34,7 @@
         <root level="warn">
             <appender-ref ref="flatfile"/>
         </root>
-        <logger name="com.yoorstore.srv" additivity="false" level="warn">
+        <logger name="com.zhengcq.srv" additivity="false" level="warn">
             <appender-ref ref="flatfile"/>
         </logger>
 

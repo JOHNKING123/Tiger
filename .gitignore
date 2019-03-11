@@ -19,10 +19,24 @@ HELP.md
 /log/
 /.idea/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-/build/
+
+service-logging/*.iml
+service-logging/target/
+
+tg-client1/*.iml
+tg-client1/target/
+
+tg-client1-api/*.iml
+tg-client1-api/target/
+
+tg-client2/*.iml
+tg-client2/target/
+
+tg-common/*.iml
+tg-common/target/
+
+tg-config/*.iml
+tg-config/target/
+
+tg-discovery/*.iml
+tg-discovery/target/
