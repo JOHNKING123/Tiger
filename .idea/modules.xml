@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tiger.iml" filepath="$PROJECT_DIR$/Tiger.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-common/core-common/core-common.iml" filepath="$PROJECT_DIR$/tg-common/core-common/core-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tg-common/core-mq/core-mq.iml" filepath="$PROJECT_DIR$/tg-common/core-mq/core-mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-common/core-server/core-server.iml" filepath="$PROJECT_DIR$/tg-common/core-server/core-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-logging/service-logging.iml" filepath="$PROJECT_DIR$/service-logging/service-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-client1/tg-client1.iml" filepath="$PROJECT_DIR$/tg-client1/tg-client1.iml" />
