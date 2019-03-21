@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zhengcq.srv.core.mq.srv.core.db.config.MybatisPlusConfig

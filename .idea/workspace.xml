@@ -2,13 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dbd2f32-3dcb-4009-8a5c-6a46a8143b3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/all/tg-client1.log" afterPath="$PROJECT_DIR$/log/all/tg-client1.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-common/pom.xml" afterPath="$PROJECT_DIR$/tg-common/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/Encodes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/Exceptions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/PropertiesContextHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/PropertiesLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/utils/StringUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/annotation/MyBatisDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/aspect/ChooseDataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/aspect/DataSourceAspect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/aspect/HandleDataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseIncAutoModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseProviderImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseServiceCtrl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseSoftRemoveModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/SuperBaseModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/config/DruidAutoConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/config/DruidProperties.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/config/MybatisPlusConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/entity/Page.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/entity/PageParam.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/entity/PageParamMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/enums/EnableEnum.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/generator/AutoGeneratorUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/BooleanToIntegerDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/BooleanToLongDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/CustomDoubleSerialize.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/CustomerBatchToDateDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/DateToCustomerBatchSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/DateToCustomerSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/DateToStringSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/IdWorkerDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/IntegerToBooleanSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/IntegerToStringSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/LongToBooleanSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/StringToDateDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/json/StringToIntegerDeserializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/java/org/apache/ibatis/session/RowBounds.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/resources/META-INF/spring.factories" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-db/src/main/resources/db/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/BaseQueueConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/DefaultQueueConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/ISimpleMessageListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/ReliableQueueConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/processer/IProcessDataService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/processer/impl/base/CeleryBaseImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/producer/RabbitMqProducer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/RabbitPublishService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/base/AbstractAmqpService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/base/BatchGetAmqpBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/util/CommonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/CeleryResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/CeleryTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/ConfigMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/GlobalSetting.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/QueueRoutings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/QueueWorkers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/base/ExecutionPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/base/IExecutionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/base/IProducer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/base/ServiceShutdownHook.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/domain/QueueMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/domain/enums/ConsumeStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/enums/ExchangeType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/enums/MessageType.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,74 +101,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-parent/pom.xml">
+      <file leaf-file-name="ChooseDataSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/aspect/ChooseDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3082">
-              <caret line="134" column="25" lean-forward="false" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            <state relative-caret-position="230">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-common/pom.xml">
+      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="161">
+              <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-discovery/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseEnums.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/baseEnums/BaseEnums.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-mq/pom.xml">
+        <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="-23">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/entity/JsonResult.java">
+      <file leaf-file-name="BaseIncAutoModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseIncAutoModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperBaseModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/SuperBaseModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4735">
+              <caret line="258" column="5" lean-forward="false" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,22 +163,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceCode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-common/core-common/src/main/java/com/zhengcq/srv/core/common/entity/ServiceCode.java">
+      <file leaf-file-name="BaseService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoGeneratorUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/generator/AutoGeneratorUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tg-client1/src/main/resources/bootstrap.yml">
+      <file leaf-file-name="GlobalSetting.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/vo/GlobalSetting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="278">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -258,16 +335,11 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="core-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="core-mq" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="core-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="core-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="core-mq" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
         <path>
@@ -373,9 +445,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,7 +472,323 @@
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="service-logging" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client1-api" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-client2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
               <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="baseEnums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="srv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="srv" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="srv" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="srv" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-db" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="srv" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
@@ -447,12 +833,185 @@
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer" type="462c0819:PsiDirectoryNode" />
+              <item name="processer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="amqp" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
+              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zhengcq" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
               <item name="tg-discovery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tiger" type="462c0819:PsiDirectoryNode" />
               <item name="tg-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
+              <item name="tg-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
@@ -467,7 +1026,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,16 +1048,12 @@
     <property name="SearchEverywhereHistoryKey" value="DynamicServerListLoadBalancer&#9;PSI&#9;JAVA://com.netflix.loadbalancer.DynamicServerListLoadBalancer&#10;ZuulHandlerMapping&#9;PSI&#9;JAVA://org.springframework.cloud.netflix.zuul.web.ZuulHandlerMapping" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg_config\src\main\resources\shared" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zhengcq.core.server" />
       <recent name="com.zhengcq.srv.client1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common\core-common\src\main\java\com\zhengcq\srv\core\common\entity" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-config\src\main\resources" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common\core-server\src\main\resources" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-client2\src\main\resources" />
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\service-logging" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zhengcq.srv.core.common.baseEnums" />
@@ -504,8 +1061,12 @@
       <recent name="com.zhengcq.srv.config" />
       <recent name="com.zhengcq.srv.client2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg_config\src\main\resources\shared" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common\core-common\src\main\java\com\zhengcq\srv\core\common\entity" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-config\src\main\resources" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-common\core-server\src\main\resources" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\tg-client2\src\main\resources" />
+      <recent name="C:\Users\13186\IdeaProjects\Tiger\service-logging" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -749,45 +1310,69 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66035000" />
+    <option name="totallyTimeSpent" value="66428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5037554" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22907725" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.49624464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34728506" sideWeight="0.49785408" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.4967811" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36373392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5037554" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22907725" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5037554" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34728506" sideWeight="0.49785408" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22907725" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.4967811" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3583691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.49624464" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -837,34 +1422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="940" column="0" lean-forward="false" selection-start-line="940" selection-start-column="0" selection-end-line="940" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.2.2/ribbon-loadbalancer-2.2.2-sources.jar!/com/netflix/loadbalancer/DynamicServerListLoadBalancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4744">
-          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-config/src/main/resources/shared/gateway-uat.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client2/src/main/java/com/zhengcq/srv/client2/client/TestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tg-gateway/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -999,21 +1556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="28" column="86" lean-forward="false" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="33" column="21" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1366,7 +1908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,6 +1926,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseIncAutoModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/aspect/ChooseDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/base/BaseProviderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-common/core-db/src/main/java/com/zhengcq/srv/core/db/entity/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-client1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding />
         </state>
       </provider>
