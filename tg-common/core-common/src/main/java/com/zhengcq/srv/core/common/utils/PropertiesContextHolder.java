@@ -1,6 +1,6 @@
 package com.zhengcq.srv.core.common.utils;
 
-import com.zhengcq.srv.core.mq.srv.core.common.utils.PropertiesLoader;
+import com.zhengcq.srv.core.common.utils.PropertiesLoader;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.Validate;
 
@@ -8,22 +8,22 @@ import org.apache.commons.lang3.Validate;
  * Created by clude on 7/18/16.
  */
 public class PropertiesContextHolder {
-    private static com.zhengcq.srv.core.mq.srv.core.common.utils.PropertiesLoader propertiesLoader = null;
+    private static com.zhengcq.srv.core.common.utils.PropertiesLoader propertiesLoader = null;
 
     private static String[] locations = ArrayUtils.EMPTY_STRING_ARRAY;
 
-    public void setPropertiesLoader(com.zhengcq.srv.core.mq.srv.core.common.utils.PropertiesLoader propertiesLoader) {
+    public void setPropertiesLoader(com.zhengcq.srv.core.common.utils.PropertiesLoader propertiesLoader) {
         PropertiesContextHolder.propertiesLoader = propertiesLoader; // NOSONAR
     }
 
     public void setLocations(String[] locations) {
         PropertiesContextHolder.locations = locations;
-        PropertiesContextHolder.propertiesLoader = new com.zhengcq.srv.core.mq.srv.core.common.utils.PropertiesLoader(locations);
+        PropertiesContextHolder.propertiesLoader = new com.zhengcq.srv.core.common.utils.PropertiesLoader(locations);
     }
 
     public static void addAdditionalLocation(String... locations){
         PropertiesContextHolder.locations = ArrayUtils.addAll(PropertiesContextHolder.locations, locations);
-        PropertiesContextHolder.propertiesLoader = new com.zhengcq.srv.core.mq.srv.core.common.utils.PropertiesLoader(PropertiesContextHolder.locations);
+        PropertiesContextHolder.propertiesLoader = new com.zhengcq.srv.core.common.utils.PropertiesLoader(PropertiesContextHolder.locations);
     }
 
     /**

@@ -40,6 +40,37 @@
             <artifactId>redisson</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+
+        <!-- 中文拼音 -->
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+        </dependency>
     </dependencies>
 
 

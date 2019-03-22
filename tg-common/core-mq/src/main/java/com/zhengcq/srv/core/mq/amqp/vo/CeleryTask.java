@@ -2,7 +2,7 @@ package com.zhengcq.srv.core.mq.amqp.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JavaType;
-import com.zhengcq.srv.core.core.utils.JSonUtils;
+import com.zhengcq.srv.core.common.utils.JSonUtils;
 
 import java.util.ArrayList;
 import java.util.List;

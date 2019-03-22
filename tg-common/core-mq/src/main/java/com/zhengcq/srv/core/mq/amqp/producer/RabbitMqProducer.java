@@ -4,7 +4,7 @@ import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import com.zhengcq.srv.core.core.utils.StringUtils;
+import com.zhengcq.srv.core.common.utils.StringUtils;
 import com.zhengcq.srv.core.mq.amqp.service.base.AbstractAmqpService;
 
 public class RabbitMqProducer extends AbstractAmqpService {

@@ -12,6 +12,7 @@
     <artifactId>core-db</artifactId>
 
 
+    <name>core-db</name>
 
     <dependencies>
 

@@ -2,11 +2,12 @@ package com.zhengcq.srv.client1.controller;
 
 import com.zhengcq.core.server.base.BaseController;
 import com.zhengcq.srv.client1.TestService;
+import com.zhengcq.srv.core.common.entity.JsonResult;
+import com.zhengcq.srv.core.mq.amqp.producer.RabbitMqProducer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/tg-client1/test")
@@ -15,6 +16,9 @@ public class TestController extends BaseController implements TestService {
 
     @Value("${userName}")
     private String userName;
+
+    @Autowired
+    private RabbitMqProducer rabbitMqProducer;
 
     @GetMapping("/hello")
     public String hello(){
@@ -25,5 +29,13 @@ public class TestController extends BaseController implements TestService {
         logger.debug("test test debug");
         logger.error("test test error");
         return userName;
+    }
+
+    @PostMapping("/test-mq")
+    public JsonResult testMq(@RequestParam("msg")String msg){
+
+
+        rabbitMqProducer.Publish(msg.getBytes(),"testMsg","testMsg",0);
+        return JsonResult.ok(true);
     }
 }

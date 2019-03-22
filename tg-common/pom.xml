@@ -18,6 +18,7 @@
         <module>core-server</module>
         <module>core-common</module>
         <module>core-mq</module>
+        <module>core-db</module>
     </modules>
 
 

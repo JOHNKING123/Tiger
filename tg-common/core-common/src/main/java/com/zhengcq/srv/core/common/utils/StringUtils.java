@@ -1,6 +1,6 @@
 package com.zhengcq.srv.core.common.utils;
 
-import com.zhengcq.srv.core.mq.srv.core.common.utils.Encodes;
+import com.zhengcq.srv.core.common.utils.Encodes;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;

@@ -2,6 +2,8 @@ package com.zhengcq.srv.core.mq.amqp.vo;
 
 import com.zhengcq.srv.core.mq.amqp.consumer.processer.IProcessDataService;
 
+import java.util.*;
+
 
 /**
  * rabbit exchange and queue set

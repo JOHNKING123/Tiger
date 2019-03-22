@@ -1,6 +1,6 @@
 package com.zhengcq.srv.core.common.utils;
 
-import com.zhengcq.srv.core.mq.srv.core.common.utils.Exceptions;
+import com.zhengcq.srv.core.common.utils.Exceptions;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
