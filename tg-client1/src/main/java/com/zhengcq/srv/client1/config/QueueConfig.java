@@ -46,20 +46,6 @@ public class QueueConfig {
         return factory;
     }
 
-    @Bean("cachingConnectionFactory")
-    public CachingConnectionFactory connectionFactory(){
-        CachingConnectionFactory cachingConnectionFactory=new CachingConnectionFactory();
-        cachingConnectionFactory.setHost(rabbitProperties.getHost());
-        cachingConnectionFactory.setPort(rabbitProperties.getPort());
-        cachingConnectionFactory.setUsername(rabbitProperties.getUsername());
-        cachingConnectionFactory.setPassword(rabbitProperties.getPassword());
-        cachingConnectionFactory.setVirtualHost(rabbitProperties.getVirtualHost());
-        cachingConnectionFactory.setPublisherConfirms(true);
-
-
-        return cachingConnectionFactory;
-    }
-
     @Bean
     RabbitMqProducer getRabbitPublishService() {
         RabbitMqProducer producer = new RabbitMqProducer(getConnectionFactory(), 10);
@@ -79,50 +65,5 @@ public class QueueConfig {
         return defaultQueueConsumer;
    }
 
-   @Bean
-    public TopicExchange defaultExchange() {
-        return new TopicExchange("testMsg");
-    }
-    /**
-     * 获取队列A
-     * @return
-     */
-    @Bean
-    public Queue queueA() {
-        return new Queue("testMsqQueueA", true); //队列持久
-    }
-    @Bean
-    Binding bindingExchangeA() {
-        return BindingBuilder.bind(queueA()).to(defaultExchange()).with("testMsg");
-    }
-   // @Bean
-    public SimpleMessageListenerContainer messageListenerContainer( CachingConnectionFactory connectionFactory ){
-        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
-        // 监听队列的名称
-        container.setQueues(queueA());
-        container.setExposeListenerChannel(true);
-        // 设置每个消费者获取的最大消息数量
-        container.setPrefetchCount(100);
-        // 消费者的个数
-        container.setConcurrentConsumers(1);
-        // 设置确认模式为手工确认
-        container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
-        container.setMessageListener(new ChannelAwareMessageListener(){
-
-            @Override
-            public void onMessage(Message message, Channel channel) throws Exception {
-                byte[] body = message.getBody();
-                logger.info("接收到消息:" + new String(body));
-                channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
-            }
-        });
-        return container;
-    }
-
-//    @Bean
-//    RabbitMqProducer getRabbitPublishService() {
-//        RabbitMqProducer publishService = new RabbitMqProducer(getConnectionFactory(), 10);
-//        return publishService;
-//    }
 
 }

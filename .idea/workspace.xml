@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dbd2f32-3dcb-4009-8a5c-6a46a8143b3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/listener/TestMqListener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tg-common/core-mq/target/classes/com/zhengcq/App.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-common/core-mq/target/classes/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.class" afterPath="$PROJECT_DIR$/tg-common/core-mq/target/classes/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1/pom.xml" afterPath="$PROJECT_DIR$/tg-client1/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java" afterPath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" afterPath="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/producer/RabbitMqProducer.java" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/producer/RabbitMqProducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/base/AbstractAmqpService.java" afterPath="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/base/AbstractAmqpService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,19 +95,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueueConfig.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QueueConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="77" column="85" lean-forward="false" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
+            <state relative-caret-position="309">
+              <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3155#3156#0" expanded="true" />
-                <element signature="e#3206#3207#0" expanded="true" />
-                <element signature="e#3288#3289#0" expanded="true" />
-                <element signature="e#3350#3351#0" expanded="true" />
-                <element signature="e#3393#3394#0" expanded="true" />
-                <element signature="e#3483#3484#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,8 +110,8 @@
       <file leaf-file-name="TestMqListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/listener/TestMqListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="265">
+              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RabbitConsumerMaker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RabbitConsumerMaker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
+            <state relative-caret-position="621">
               <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding />
             </state>
@@ -251,10 +236,10 @@
         <option value="$PROJECT_DIR$/tg-client1/pom.xml" />
         <option value="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/controller/TestController.java" />
         <option value="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/listener/TestMqListener.java" />
-        <option value="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java" />
         <option value="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/service/base/AbstractAmqpService.java" />
         <option value="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java" />
         <option value="$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/producer/RabbitMqProducer.java" />
+        <option value="$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java" />
       </list>
     </option>
   </component>
@@ -288,7 +273,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1400" />
@@ -427,18 +412,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mq" type="462c0819:PsiDirectoryNode" />
               <item name="amqp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tiger" type="462c0819:PsiDirectoryNode" />
-              <item name="tg-common" type="462c0819:PsiDirectoryNode" />
-              <item name="core-mq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mq" type="462c0819:PsiDirectoryNode" />
-              <item name="amqp" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tiger" type="b2602c69:ProjectViewProjectNode" />
@@ -738,7 +711,7 @@
       <workItem from="1552877911287" duration="633000" />
       <workItem from="1553160094228" duration="2048000" />
       <workItem from="1553247075212" duration="1163000" />
-      <workItem from="1553478745073" duration="11143000" />
+      <workItem from="1553478745073" duration="12285000" />
     </task>
     <task id="LOCAL-00001" summary="fix code">
       <created>1553155329413</created>
@@ -751,10 +724,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85543000" />
+    <option name="totallyTimeSpent" value="86685000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -773,8 +746,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35859728" sideWeight="0.49785408" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.49624464" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35859728" sideWeight="0.49785408" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.49624464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.4967811" order="7" side_tool="false" content_ui="tabs" />
@@ -1143,7 +1116,7 @@
         <state relative-caret-position="218">
           <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1161,16 +1134,6 @@
         <state relative-caret-position="92">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/listener/TestMqListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,27 +1187,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java">
+    <entry file="file://$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="77" column="85" lean-forward="false" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
+        <state relative-caret-position="621">
+          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/listener/TestMqListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3288#3289#0" expanded="true" />
-            <element signature="e#3350#3351#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#3483#3484#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tg-common/core-mq/src/main/java/com/zhengcq/srv/core/mq/amqp/consumer/RabbitConsumerMaker.java">
+    <entry file="file://$PROJECT_DIR$/tg-client1/src/main/java/com/zhengcq/srv/client1/config/QueueConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="309">
+          <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
