@@ -3,6 +3,7 @@ package com.zhengcq.srv.client1.controller;
 import com.zhengcq.core.server.base.BaseController;
 import com.zhengcq.srv.client1.TestService;
 import com.zhengcq.srv.core.common.entity.JsonResult;
+import com.zhengcq.srv.core.mq.amqp.consumer.RabbitConsumerMaker;
 import com.zhengcq.srv.core.mq.amqp.producer.RabbitMqProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +21,7 @@ public class TestController extends BaseController implements TestService {
     @Autowired
     private RabbitMqProducer rabbitMqProducer;
 
+
     @GetMapping("/hello")
     public String hello(){
 
@@ -36,6 +38,13 @@ public class TestController extends BaseController implements TestService {
 
 
         rabbitMqProducer.Publish(msg.getBytes(),"testMsg","testMsg",0);
+        return JsonResult.ok(true);
+    }
+
+    @PostMapping("/test-mq-consumer")
+    public JsonResult testMqConsumer(){
+
+
         return JsonResult.ok(true);
     }
 }

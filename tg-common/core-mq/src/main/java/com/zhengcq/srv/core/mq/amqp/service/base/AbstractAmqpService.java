@@ -22,6 +22,10 @@ public abstract class AbstractAmqpService implements IExecutionService {
 	protected static final boolean AMQP_TEMPQUEUE_AUTO_DELETE = true;
 	protected static final boolean AMQP_TEMPQUEUE_EXCLUSIVE  = false;
 
+	protected static final String DEFAULT_EXCHANGE_NAME = "TIGER_DEFAULT_EXCHANGE";
+
+	protected static final String DEFAULT_ROUTING_KEY = "TIGER_DEFAULT_ROUTING_KEY";
+
 	private Connection connection;
 	private ExecutorService executorSrv;
 

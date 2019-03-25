@@ -44,6 +44,7 @@ public class RabbitMqProducer extends AbstractAmqpService {
         this.Publish(data, routingKey, exchange, builder.build());
     }
 
+
     /**
      * Send a message to the rabbitMQ, method 2
      * @param data

@@ -16,6 +16,7 @@ import java.util.Map;
 public class RabbitConsumerMaker extends AbstractAmqpService {
 	private List<Consumer> consumers = new ArrayList<>();
 
+
 	public RabbitConsumerMaker(ConnectionFactory connectionFactory, Integer threadSize) {
 		super(connectionFactory, threadSize);
 	}
@@ -34,6 +35,20 @@ public class RabbitConsumerMaker extends AbstractAmqpService {
 			}
 
 		}
+	}
+
+	public DefaultQueueConsumer  createDefaultQueueConsumer(String exchange, String queue, String routingKey, ISimpleMessageListener listener) throws Exception{
+		Channel channel = this.getConnection().createChannel();
+		this.queueDeclare(channel, exchange, queue, routingKey);
+		DefaultQueueConsumer consumer = new DefaultQueueConsumer(channel, queue, listener);
+		return consumer;
+	}
+
+	public DefaultQueueConsumer  createDefaultQueueConsumer(String queue, ISimpleMessageListener listener) throws Exception{
+		Channel channel = this.getConnection().createChannel();
+		this.queueDeclare(channel, DEFAULT_EXCHANGE_NAME, queue, DEFAULT_ROUTING_KEY);
+		DefaultQueueConsumer consumer = new DefaultQueueConsumer(channel, queue, listener);
+		return consumer;
 	}
 
 
