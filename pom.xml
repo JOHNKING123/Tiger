@@ -18,6 +18,7 @@
     <module>tg-gateway</module>
     <module>service-logging</module>
     <module>tg-common</module>
+    <module>tg-uac</module>
   </modules>
 
   <name>Tiger</name>

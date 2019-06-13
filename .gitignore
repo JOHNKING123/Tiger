@@ -18,6 +18,13 @@ HELP.md
 *.ipr
 /log/
 /.idea/
+.idea/
+
+*.DS_Store
+*.iml
+*.project
+target/
+*.settings/
 
 ### NetBeans ###
 /nbproject/private/

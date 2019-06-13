@@ -17,6 +17,7 @@
         <module name="tg-config" />
         <module name="tg-discovery" />
         <module name="tg-gateway" />
+        <module name="tg-uac" />
         <module name="tg_client1" />
         <module name="tg_config" />
         <module name="tgcommon" />
@@ -36,6 +37,7 @@
       <module name="tg-discovery" target="1.8" />
       <module name="tg-gateway" target="1.8" />
       <module name="tg-parent" target="1.8" />
+      <module name="tg-uac" target="1.8" />
       <module name="tg_client1" target="1.7" />
       <module name="tg_config" target="1.7" />
       <module name="tg_parent" target="1.7" />

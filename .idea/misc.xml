@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/tg-discovery/pom.xml" />
         <option value="$PROJECT_DIR$/tg-client2/pom.xml" />
         <option value="$PROJECT_DIR$/tg-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/tg-uac/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/tg-discovery/tg-discovery.iml" filepath="$PROJECT_DIR$/tg-discovery/tg-discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-gateway/tg-gateway.iml" filepath="$PROJECT_DIR$/tg-gateway/tg-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/tg-parent/tg-parent.iml" filepath="$PROJECT_DIR$/tg-parent/tg-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tg-uac/tg-uac.iml" filepath="$PROJECT_DIR$/tg-uac/tg-uac.iml" />
     </modules>
   </component>
 </project>
