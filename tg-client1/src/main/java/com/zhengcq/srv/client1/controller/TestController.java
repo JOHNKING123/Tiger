@@ -23,7 +23,7 @@ public class TestController extends BaseController implements TestService {
 
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello(@RequestParam(required = false,value = "access_token")String accessToken){
 
         logger.warn("test test warn");
         logger.info("test test info");
