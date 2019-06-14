@@ -6,9 +6,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.zhengcq.srv.core.db.json.IdWorkerDeserializer;
-import com.zhengcq.srv.core.model.constants.GlobalConstant;
-import com.zhengcq.srv.core.util.ThreadLocalMap;
-import com.zhengcq.srv.core.utils.StringUtils;
+//import com.zhengcq.srv.core.model.constants.GlobalConstant;
+//import com.zhengcq.srv.core.util.ThreadLocalMap;
+import com.zhengcq.srv.core.common.utils.StringUtils;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -123,22 +123,22 @@ public class SuperBaseModel implements Serializable {
     }
 
 
-    /**
-     * 最终操作用户ID
-     * 为了兼容现有的方法，减少改造难度，这里直接从ThreadLocal里获取登录用户ID
-     * 合理的做法应该是改造方法，从web controller传登录用户信息给service， 然后service 在设置相应操作用户ID
-     * @return
-     */
+//    /**
+//     * 最终操作用户ID
+//     * 为了兼容现有的方法，减少改造难度，这里直接从ThreadLocal里获取登录用户ID
+//     * 合理的做法应该是改造方法，从web controller传登录用户信息给service， 然后service 在设置相应操作用户ID
+//     * @return
+//     */
     private Long getOperatorId() {
-        try{
-            Long userId = (Long) ThreadLocalMap.get(GlobalConstant.Sys.CURRENT_AUTH_ID);
-            if (userId == null) {
-                return 0L;
-            }
-            return userId;
-        } catch (Exception e) {
-            // 加try / catch以防万一，不影响主流程， 暂时不记录error, 直接吃掉
-        }
+//        try{
+//            Long userId = (Long) ThreadLocalMap.get(GlobalConstant.Sys.CURRENT_AUTH_ID);
+//            if (userId == null) {
+//                return 0L;
+//            }
+//            return userId;
+//        } catch (Exception e) {
+//            // 加try / catch以防万一，不影响主流程， 暂时不记录error, 直接吃掉
+//        }
         return 0L;
 
     }

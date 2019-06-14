@@ -2,6 +2,8 @@ package com.zhengcq.srv.client1.controller;
 
 import com.zhengcq.core.server.base.BaseController;
 import com.zhengcq.srv.client1.TestService;
+import com.zhengcq.srv.client1.model.User;
+import com.zhengcq.srv.client1.service.UserService;
 import com.zhengcq.srv.core.common.entity.JsonResult;
 import com.zhengcq.srv.core.mq.amqp.consumer.RabbitConsumerMaker;
 import com.zhengcq.srv.core.mq.amqp.producer.RabbitMqProducer;
@@ -20,6 +22,9 @@ public class TestController extends BaseController implements TestService {
 
     @Autowired
     private RabbitMqProducer rabbitMqProducer;
+
+    @Autowired
+    private UserService userService;
 
 
     @GetMapping("/hello")
@@ -46,5 +51,13 @@ public class TestController extends BaseController implements TestService {
 
 
         return JsonResult.ok(true);
+    }
+
+    @GetMapping("/get-user")
+    public JsonResult<User>  getUser(@RequestParam("userId")Long userId){
+
+        User user = userService.selectById(userId);
+
+        return JsonResult.ok(user);
     }
 }

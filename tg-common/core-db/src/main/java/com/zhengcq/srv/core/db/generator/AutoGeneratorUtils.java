@@ -22,12 +22,12 @@ public class AutoGeneratorUtils {
     final static String SUPER_SERVICE_CLASS = "com.zhengcq.srv.core.db.base.BaseService";
     final static String SUPER_SERVICE_IMPL_CLASS = "com.zhengcq.srv.core.db.base.BaseServiceImpl";
 
-    final static String[] TABLE_TO_GENERATE_ARRAY = new String[] {"msg_mq_subscribe"};
+    final static String[] TABLE_TO_GENERATE_ARRAY = new String[] {"ba_url"};
 
 
 
     //模块名称
-    final static String MODULE_NAME = "msg";
+    final static String MODULE_NAME = "client1";
     //公共包名称
     final static String PACKAGE_PARENT = "com.zhengcq.srv";
 

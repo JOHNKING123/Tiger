@@ -13,7 +13,7 @@
 
     <name>core-server</name>
 
-
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
