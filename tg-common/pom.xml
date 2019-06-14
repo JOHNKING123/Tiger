@@ -20,6 +20,7 @@
         <module>core-common</module>
         <module>core-mq</module>
         <module>core-db</module>
+        <module>core-db-new</module>
     </modules>
 
 

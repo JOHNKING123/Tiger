@@ -17,7 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>com.zhengcq</groupId>
-            <artifactId>core-db</artifactId>
+            <artifactId>core-db-new</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

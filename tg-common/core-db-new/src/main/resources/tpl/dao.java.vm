@@ -1,0 +1,18 @@
+package ${package.Mapper};
+
+import com.zhengcq.srv.core.db.annotation.MyBatisDao;
+import ${package.Entity}.${entity};
+import ${superMapperClassPackage};
+
+/**
+ * <p>
+ * Mapper接口
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@MyBatisDao
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+}
