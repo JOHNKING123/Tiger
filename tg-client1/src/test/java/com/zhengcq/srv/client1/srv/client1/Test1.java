@@ -1,11 +1,12 @@
 package com.zhengcq.srv.client1.srv.client1;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.nio.charset.Charset;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
+import com.google.common.hash.BloomFilter;
+import com.google.common.hash.Funnels;
 import com.zhengcq.srv.client1.service.RemoteCallService;
 import org.jooq.lambda.*;
 import org.jooq.lambda.tuple.Tuple2;
@@ -15,10 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest
 public class Test1 {
-    @Autowired
+//    @Autowired
     private RemoteCallService remoteCallService;
     public static void main(String[] args){
 
@@ -84,5 +85,48 @@ public class Test1 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Test
+    public void testBoomFilter(){
+
+        BloomFilter<String> b = BloomFilter.create(Funnels.stringFunnel(Charset.forName("utf-8")), 1000000, 0.03);
+
+        Set<String> mySet  = new HashSet<>(1000000);
+        List<String> ls = new LinkedList<>();
+
+        for(int i=0 ;i<1000000;i++){
+            String uuid = UUID.randomUUID().toString();
+            b.put(uuid);
+            mySet.add(uuid);
+
+            if(i % 100 == 0){
+                ls.add(uuid);
+            }else {
+                String tmp = UUID.randomUUID().toString()+i;
+                ls.add(tmp);
+            }
+        }
+
+        int right = 0;
+        int wrong = 0;
+
+        for(String str :ls ){
+            if(b.mightContain(str)){
+                if(mySet.contains(str)){
+                    right++;
+                }else{
+                    wrong++;
+                }
+            }
+        }
+
+
+        System.out.println(right);
+        System.out.println(wrong);
+
+
+
     }
 }
