@@ -56,8 +56,8 @@ public class TestController extends BaseController implements TestService {
     @GetMapping("/get-user")
     public JsonResult<User>  getUser(@RequestParam("userId")Long userId){
 
-        User user = userService.selectById(userId);
-
-        return JsonResult.ok(user);
+//        User user = userService.selectById(userId);
+        userService.testPostProcessor(userName);
+        return JsonResult.ok(new User());
     }
 }

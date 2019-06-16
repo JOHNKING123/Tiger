@@ -14,6 +14,8 @@ import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.core.ChannelAwareMessageListener;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -65,5 +67,14 @@ public class QueueConfig {
         return defaultQueueConsumer;
    }
 
+//   @Bean
+//   public BeanFactoryPostProcessor getTestBeanFactoryPostProcessor(){
+//        return new TestBeanFactoryPostProcessor();
+//   }
+//
+   @Bean
+   public BeanPostProcessor getTestBeanPostPostProcessor(){
+       return new TestBeanPostProcessor();
+   }
 
 }
