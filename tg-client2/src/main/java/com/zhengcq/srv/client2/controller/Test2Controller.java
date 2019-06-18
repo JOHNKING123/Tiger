@@ -1,5 +1,6 @@
 package com.zhengcq.srv.client2.controller;
 
+import com.zhengcq.core.server.base.BaseController;
 import com.zhengcq.srv.client2.client.TestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/api/tg-client2/test2")
-public class Test2Controller {
+public class Test2Controller extends BaseController{
 
     @Autowired
     private TestClient testClient;
@@ -35,8 +36,11 @@ public class Test2Controller {
 
     @GetMapping("/say-hi")
     public String sayHi(){
+        logger.warn("test test warn");
+        logger.info("test test info");
 
-
+        logger.debug("test test debug");
+        logger.error("test test error");
         return "hi,john";
     }
 }

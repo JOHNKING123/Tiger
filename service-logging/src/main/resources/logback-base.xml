@@ -23,9 +23,11 @@
             <appender-ref ref="console"/>
             <appender-ref ref="flatfile"/>
         </root>
-        <logger name="com.zhengcq.srv" additivity="false" level="debug">
+        <logger name="com.zhengcq.srv" additivity="false" level="warn">
             <appender-ref ref="console"/>
             <appender-ref ref="flatfile"/>
+            <appender-ref ref="logstash"/>
+            <appender-ref ref="socket"/>
         </logger>
 
     </springProfile>
