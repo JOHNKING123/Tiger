@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yoorstore.srv.inv.dao.FiApDetailDao">
+<mapper namespace="com.zhengcq.srv.client1.dao.UserDao">
 
     <!-- 通用查询映射结果-->
     <resultMap id="BaseResultMap" type="com.zhengcq.srv.client1.model.User">
@@ -9,4 +9,12 @@
         <result column="age" property="age" />
         <result column="nick_name" property="nickName" />
     </resultMap>
+
+    <select id="getByUserId" resultMap="BaseResultMap">
+        SELECT
+           t.*
+        FROM user  t
+              LEFT JOIN score t1 on t1.user_id = t.id
+        WHERE t.id = #{userId}
+    </select>
 </mapper>

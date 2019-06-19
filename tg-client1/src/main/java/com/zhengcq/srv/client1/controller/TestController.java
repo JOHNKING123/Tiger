@@ -58,6 +58,10 @@ public class TestController extends BaseController implements TestService {
 
 //        User user = userService.selectById(userId);
         userService.testPostProcessor(userName);
+        userService.selectById(6L);
+       User user =  userService.selectById(6L);
+       user.setName("nikou");
+       userService.updateById(user);
         return JsonResult.ok(new User());
     }
 }

@@ -23,7 +23,7 @@
             <appender-ref ref="console"/>
             <appender-ref ref="flatfile"/>
         </root>
-        <logger name="com.zhengcq.srv" additivity="false" level="warn">
+        <logger name="com.zhengcq.srv" additivity="false" level="debug">
             <appender-ref ref="console"/>
             <appender-ref ref="flatfile"/>
             <appender-ref ref="logstash"/>

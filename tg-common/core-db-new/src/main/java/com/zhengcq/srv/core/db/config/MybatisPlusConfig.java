@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.entity.GlobalConfiguration;
 import com.baomidou.mybatisplus.enums.DBType;
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean;
+import com.zhengcq.srv.core.db.interceptor.UpdateSqlInterceptor;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
 import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
@@ -58,11 +59,21 @@ public class MybatisPlusConfig {
 		return page;
 	}
 
+	@Bean
+	public UpdateSqlInterceptor updateSqlInterceptor(){
+		UpdateSqlInterceptor updateSqlInterceptor = new UpdateSqlInterceptor();
+		return updateSqlInterceptor;
+	}
+
 	private Interceptor[] getInterceptors(){
-        PaginationInterceptor page = new PaginationInterceptor();
-        page.setDialectType("mysql");
-        return new Interceptor[]{page};
-    }
+		PaginationInterceptor page = new PaginationInterceptor();
+		page.setDialectType("mysql");
+
+		UpdateSqlInterceptor updateSqlInterceptor = new UpdateSqlInterceptor();
+
+		Interceptor[] interceptors = new Interceptor[]{page,updateSqlInterceptor};
+		return interceptors;
+	}
 
 	/**
 	 * 这里全部使用mybatis-autoconfigure 已经自动加载的资源。不手动指定

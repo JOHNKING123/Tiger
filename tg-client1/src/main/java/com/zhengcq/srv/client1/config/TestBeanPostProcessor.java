@@ -18,10 +18,10 @@ public class TestBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object o, String s) throws BeansException {
 //        System.out.println("postProcessAfterInitialization----"+s);
-        if(s.equals("userService")){
-            System.out.println("postProcessAfterInitialization----"+s+",i find you");
-            return new UserServiceEnhance();
-        }
+//        if(s.equals("userService")){
+//            System.out.println("postProcessAfterInitialization----"+s+",i find you");
+//            return new UserServiceEnhance();
+//        }
         return o;
     }
 }

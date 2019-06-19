@@ -1,5 +1,6 @@
 package com.zhengcq.srv.core.db.interceptor;
 
+import com.zhengcq.srv.core.common.utils.JSonUtils;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
@@ -19,7 +20,8 @@ public class UpdateSqlInterceptor implements Interceptor {
         if (ms.getSqlCommandType() == SqlCommandType.DELETE || ms.getSqlCommandType() == SqlCommandType.UPDATE) {
             Object parameter = invocation.getArgs()[1];
             BoundSql boundSql = ms.getBoundSql(parameter);
-           logger.warn(boundSql.getSql());
+           logger.warn("UpdateSqlInterceptor-----sql:{}"+boundSql.getSql());
+           logger.warn("UpdateSqlInterceptor-----params:{}"+ JSonUtils.toJson(boundSql.getParameterObject()));
         }
         return invocation.proceed();
     }

@@ -12,4 +12,9 @@ public class UserService extends BaseServiceImpl<UserDao, User> {
     public void testPostProcessor(String str){
         System.out.println("testPostProcessor-----"+str);
     }
+
+
+    public User getByUserId(Long userId){
+        return baseDao.getByUserId(userId);
+    }
 }
