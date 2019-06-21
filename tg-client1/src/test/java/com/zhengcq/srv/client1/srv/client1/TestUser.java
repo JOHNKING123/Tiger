@@ -3,6 +3,7 @@ package com.zhengcq.srv.client1.srv.client1;
 import com.zhengcq.srv.client1.model.User;
 import com.zhengcq.srv.client1.service.UserService;
 import com.zhengcq.srv.core.db.annotation.MyBatisDao;
+import com.zhengcq.srv.core.db.base.BaseService;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
@@ -46,4 +47,6 @@ public class TestUser {
 //        System.out.println(user2);
 //        System.out.println(1);
     }
+
+
 }

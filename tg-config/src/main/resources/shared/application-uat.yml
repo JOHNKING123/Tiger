@@ -20,6 +20,8 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery:9182/eureka/
 
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
 
 spring:
   rabbitmq:

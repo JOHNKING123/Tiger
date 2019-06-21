@@ -1,5 +1,6 @@
 package com.zhengcq.srv.client1.controller;
 
+import com.zhengcq.core.server.annotation.LogAnnotation;
 import com.zhengcq.core.server.base.BaseController;
 import com.zhengcq.srv.client1.TestService;
 import com.zhengcq.srv.client1.model.User;
@@ -53,13 +54,15 @@ public class TestController extends BaseController implements TestService {
         return JsonResult.ok(true);
     }
 
+
     @GetMapping("/get-user")
     public JsonResult<User>  getUser(@RequestParam("userId")Long userId){
 
 //        User user = userService.selectById(userId);
+        logger.warn("test arthas haha");
         userService.testPostProcessor(userName);
         userService.selectById(6L);
-       User user =  userService.selectById(6L);
+       User user =  userService.getByUserId(6L);
        user.setName("nikou");
        userService.updateById(user);
         return JsonResult.ok(new User());

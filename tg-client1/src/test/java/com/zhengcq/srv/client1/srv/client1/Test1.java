@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 import com.zhengcq.srv.client1.service.RemoteCallService;
+import com.zhengcq.srv.client1.service.UserService;
+import com.zhengcq.srv.core.db.base.BaseService;
 import org.jooq.lambda.*;
 import org.jooq.lambda.tuple.Tuple2;
 import org.junit.Test;
@@ -128,5 +130,12 @@ public class Test1 {
 
 
 
+    }
+
+
+    @Test
+    public void   testInterface(){
+        System.out.println(UserService.class.isInterface());
+        System.out.println(BaseService.class.isInterface());
     }
 }
