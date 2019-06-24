@@ -15,6 +15,7 @@
     <module>tg-client1</module>
     <module>tg-client1-api</module>
     <module>tg-client2</module>
+    <module>tg-client3</module>
     <module>tg-gateway</module>
     <module>service-logging</module>
     <module>tg-common</module>
