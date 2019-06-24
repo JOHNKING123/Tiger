@@ -27,8 +27,8 @@ import java.lang.reflect.Method;
 /**
  * Created by heqingfu on 2017/6/28.
  */
-//@Configuration
-//@EnableCaching
+@Configuration
+@EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
