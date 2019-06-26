@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("/api/tg-client1/test")
 @RefreshScope
@@ -49,7 +51,8 @@ public class TestController extends BaseController implements TestService {
 
     @PostMapping("/test-mq-consumer")
     public JsonResult testMqConsumer(){
-
+	
+	System.out.println("this is vi edit");
 
         return JsonResult.ok(true);
     }
@@ -66,5 +69,17 @@ public class TestController extends BaseController implements TestService {
        user.setName("nikou");
        userService.updateById(user);
         return JsonResult.ok(new User());
+    }
+
+
+    @GetMapping("/test-session")
+    public String testSession(HttpServletRequest request){
+        Object o = request.getSession().getAttribute("springboot");
+        if(o == null){
+            o = "spring boot 牛逼了!!!有端口"+request.getLocalPort()+"生成";
+            request.getSession().setAttribute("springboot", o);
+        }
+
+        return "端口=" + request.getLocalPort() +  " sessionId=" + request.getSession().getId() +"<br/>"+o;
     }
 }

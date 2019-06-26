@@ -11,7 +11,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @RestController
-@RequestMapping("/api/client3/test")
+@RequestMapping("/api/tg-client3/test")
 public class TestController extends BaseController {
 
     @GetMapping("/test-session")

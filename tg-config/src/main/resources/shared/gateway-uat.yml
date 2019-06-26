@@ -29,6 +29,11 @@ zuul:
       serviceId: tg-client2
       stripPrefix: false
       sensitiveHeaders:
+    tg-client3:
+      path: /api/tg-client3/**
+      serviceId: tg-client3
+      stripPrefix: false
+      sensitiveHeaders:
 server:
   port: 9888
 
