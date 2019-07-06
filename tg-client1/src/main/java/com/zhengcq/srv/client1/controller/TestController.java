@@ -6,6 +6,7 @@ import com.zhengcq.srv.client1.TestService;
 import com.zhengcq.srv.client1.model.User;
 import com.zhengcq.srv.client1.service.UserService;
 import com.zhengcq.srv.core.common.entity.JsonResult;
+import com.zhengcq.srv.core.common.utils.JedisUtils;
 import com.zhengcq.srv.core.mq.amqp.consumer.RabbitConsumerMaker;
 import com.zhengcq.srv.core.mq.amqp.producer.RabbitMqProducer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/tg-client1/test")
@@ -81,5 +83,41 @@ public class TestController extends BaseController implements TestService {
         }
 
         return "端口=" + request.getLocalPort() +  " sessionId=" + request.getSession().getId() +"<br/>"+o;
+    }
+    private Integer  shareValue = 0;
+    @PostMapping("/test-redis-lock")
+    public JsonResult  testRedisLock(@RequestParam("userId")Long userId) throws InterruptedException {
+        String uuId = UUID.randomUUID().toString()+Thread.currentThread().toString();
+        try {
+            boolean lockRs  = JedisUtils.tryLock("shareValue",uuId,3000,50);
+//            boolean lockRs = true;
+            if(lockRs){
+                Thread.sleep(2000);
+                if(shareValue == 5){
+                    shareValue++;
+                    System.out.println("share value:"+shareValue);
+                    System.out.println("current value is "+shareValue+",wait");
+                    Thread.sleep(120000);
+                }else{
+                    shareValue++;
+                    System.out.println("share value:"+shareValue);
+                }
+
+
+            }else {
+                System.out.println("fail to get lock;share value:"+shareValue);
+            }
+        }catch (InterruptedException e1){
+           throw  e1;
+        }catch (Exception e){
+            throw e;
+        }finally {
+            JedisUtils.unlock("shareValue",uuId);
+        }
+//        boolean lockRs1 = JedisUtils.lock("shareValue1","haha",60000);
+//        System.out.println("lockRs1:"+lockRs1);
+
+
+        return JsonResult.ok(true);
     }
 }

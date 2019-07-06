@@ -83,7 +83,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     @Value("${spring.redis.maxIdle}")
     private int maxIdle;
 
-    @Value("${spring.redis.minIdle}")
+    @Value("${spring.redis.maxWait}")
     private long maxWaitMillis;
 
     @Value("${spring.redis.password}")
@@ -97,14 +97,14 @@ public class RedisConfig extends CachingConfigurerSupport {
         jedisPoolConfig.setMaxIdle(maxIdle);
         jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
 
-        if(StringUtils.isEmpty(password)){
+        if(StringUtils.isEmptyByTrim(password)){
             logger.warn("注意 redis密码为空!");
         } else {
             logger.warn(String.format("redis 连接需要密码, 长度: %d", password.length()));
         }
 
         JedisPool jedisPool = null;
-        if(StringUtils.isEmpty(password)) {
+        if(StringUtils.isEmptyByTrim(password)) {
             jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout);
         } else {
             // redis存在密码
