@@ -20,6 +20,7 @@
     <module>service-logging</module>
     <module>tg-common</module>
     <module>tg-uac</module>
+    <module>base-demo</module>
   </modules>
 
   <name>Tiger</name>
