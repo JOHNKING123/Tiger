@@ -87,13 +87,14 @@ public class TestController extends BaseController implements TestService {
     private Integer  shareValue = 0;
     @PostMapping("/test-redis-lock")
     public JsonResult  testRedisLock(@RequestParam("userId")Long userId) throws InterruptedException {
+        System.out.println("i am thread:"+Thread.currentThread()+" start to work");
         String uuId = UUID.randomUUID().toString()+Thread.currentThread().toString();
         try {
             boolean lockRs  = JedisUtils.tryLock("shareValue",uuId,3000,50);
 //            boolean lockRs = true;
             if(lockRs){
                 Thread.sleep(2000);
-                if(shareValue == 5){
+                if(shareValue == 65){
                     shareValue++;
                     System.out.println("share value:"+shareValue);
                     System.out.println("current value is "+shareValue+",wait");
