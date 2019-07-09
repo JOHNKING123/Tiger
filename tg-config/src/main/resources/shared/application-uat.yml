@@ -42,7 +42,8 @@ spring:
       initialSize: 1
       minIdle: 1
       filters: stat,slf4j
-
+  session:
+    store-type: redis
   redis:
     database: 0
     host: 47.105.143.13
