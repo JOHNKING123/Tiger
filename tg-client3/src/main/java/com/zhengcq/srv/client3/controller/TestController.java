@@ -1,6 +1,8 @@
 package com.zhengcq.srv.client3.controller;
 
 import com.zhengcq.core.server.base.BaseController;
+import com.zhengcq.srv.client3.client.TestClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +16,9 @@ import java.net.UnknownHostException;
 @RequestMapping("/api/tg-client3/test")
 public class TestController extends BaseController {
 
+    @Autowired
+    private TestClient testClient;
+
     @GetMapping("/test-session")
     public String testSession(HttpServletRequest request){
         Object o = request.getSession().getAttribute("springboot");
@@ -23,5 +28,13 @@ public class TestController extends BaseController {
         }
 
         return "端口=" + request.getLocalPort() +  " sessionId=" + request.getSession().getId() +"<br/>"+o;
+    }
+
+    @GetMapping("/test-hystrix")
+    public String testHystrix(){
+
+        String rs = testClient.hello("xxxx");
+        logger.debug("rs:"+rs);
+        return "hello,i am fine";
     }
 }

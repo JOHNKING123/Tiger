@@ -55,3 +55,6 @@ spring:
     maxActive: 8
     maxWait: -1
 
+feign:
+  hystrix:
+    enabled: true

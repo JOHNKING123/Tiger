@@ -8,7 +8,7 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../tg-parent</relativePath>  <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.zhengcq</groupId>
+
 	<artifactId>tg-client3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tg-client3</name>
@@ -24,7 +24,11 @@
 			<artifactId>service-logging</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.zhengcq</groupId>
+			<artifactId>tg-client1-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>com.zhengcq</groupId>
 			<artifactId>core-server</artifactId>
@@ -34,7 +38,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
