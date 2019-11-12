@@ -55,7 +55,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         StandardPasswordEncoder standardPasswordEncoder = new StandardPasswordEncoder();
         clients.inMemory()
                 .withClient("client1")//用于标识用户ID
-                .authorizedGrantTypes("authorization_code","refresh_token")//授权方式
+                .authorizedGrantTypes("password","authorization_code","refresh_token")//授权方式
                 .scopes("all")//授权范围
                 .secret("123456");//客户端安全码,secret密码配置从 Spring Security 5.0开始必须以 {bcrypt}+加密后的密码 这种格式填写;
     }
