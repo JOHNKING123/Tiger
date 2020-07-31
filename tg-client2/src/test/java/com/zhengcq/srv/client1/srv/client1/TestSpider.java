@@ -157,7 +157,7 @@ public class TestSpider {
                             filePoolExecutor.execute(() -> {
                                 try {
                                     System.out.println("deal file " + j);
-                                    saveAibookContent(fileUrl, "E:\\ebook\\");
+                                    saveAibookContent(fileUrl, "F:\\ebook\\");
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
@@ -302,17 +302,76 @@ public class TestSpider {
 
     }
 
+
+    @Test
+    public void testSpiderCaimogeBook() {
+        String urlTmp = "https://www.qinkan.net/";
+        dirUrlSet.add(urlTmp);
+        dirUrlQueue.add(urlTmp);
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
+                TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
+        ThreadPoolExecutor filePoolExecutor =  new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
+                TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int i = 0;
+                while (true) {
+                    try {
+                        while (!fileUrlQueue.isEmpty()) {
+                            FileUrl fileUrl = fileUrlQueue.remove();
+                            int j = i++;
+                            filePoolExecutor.execute(() -> {
+                                try {
+                                    System.out.println("deal file " + j);
+                                    saveToFileV2(fileUrl, "F:\\ebook\\caimoge\\");
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            });
+                        }
+                    } catch (Exception e) {
+                        System.out.println("deal file error");
+                    }
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        for (int i = 1; i<= 58710;i++) {
+            String tartUrl =  "https://www.caimoge.net/down/all/" + i ;
+            FileUrl fileUrl = new FileUrl();
+            fileUrl.setUrl(tartUrl);
+            fileUrlQueue.add(fileUrl);
+        }
+        thread.start();
+        while (!fileUrlQueue.isEmpty() || filePoolExecutor.getTaskCount() != 0) {
+            System.out.println("fileUrl dealing fileUrlQueue:" + fileUrlQueue.size() + ",   filePool:" + filePoolExecutor.getTaskCount());
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     @Test
     public void testDownLoadFile() {
-        String url = "http://d3.qinkan.net/d/mobi/78/《妖尾之幻想造型师》_qinkan.net.mobi";
+        String url = "https://www.caimoge.net/down/all/55763";
 //        String url = "https://kgbook.com/d/file/202001/(NEW)%E7%88%B1%E5%BE%B7%E5%8D%8E%E4%B8%80%E4%B8%96%EF%BC%9A%E4%BC%9F%E5%A4%A7%E8%80%8C%E4%BB%A4%E4%BA%BA%E6%88%98%E6%A0%97%E7%9A%84%E5%9B%BD%E7%8E%8B%E5%92%8C%E4%BB%96%E9%94%BB%E9%80%A0%E7%9A%84%E4%B8%8D%E5%88%97%E9%A2%A0_20200130958.epub";
 
 //        downloadFromUrl(url, "E:\\ebook");
         try {
             FileUrl fileUrl = new FileUrl();
             fileUrl.setUrl(url);
-            fileUrl.setName("妖尾之幻想造型师");
-            saveToFileV1(fileUrl, "E:\\ebook\\");
+            fileUrl.setName("万界之我是演员");
+            saveToFileV2(fileUrl, "F:\\");
 //            testUrl(url);
         } catch (Exception e) {
             e.printStackTrace();
@@ -394,6 +453,54 @@ public class TestSpider {
         bis.close();
         httpUrl.disconnect();
     }
+
+    public static void saveToFileV2(FileUrl fileUrl, String fileName) throws IOException {
+        String destUrl = fileUrl.getUrl();
+
+        FileOutputStream fos = null;
+        BufferedInputStream bis = null;
+        HttpURLConnection httpUrl = null;
+        URL url = null;
+        byte[] buf = new byte[1024*1024];
+        int size = 0;
+
+        url = new URL(destUrl);
+        httpUrl = (HttpURLConnection) url.openConnection();
+//        httpUrl.setRequestProperty("accept-encoding", "gzip, deflate, br");
+//        httpUrl.setRequestProperty("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+//        httpUrl.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36");
+        httpUrl.connect();
+        InputStream inputStream = null;
+        try {
+            inputStream =  httpUrl.getInputStream();
+        } catch (Exception e) {
+            System.out.println("ex");
+        }
+
+
+        String fileUrlStr =  convertUrl(httpUrl.getURL().getPath());
+        System.out.println(fileUrlStr);
+        String tmpFileName = "";
+        String[] tmps = URLDecoder.decode(fileUrlStr).split("/");
+        tmpFileName =  tmps[tmps.length-1];
+        fileName = fileName + tmpFileName;
+//        System.out.println(getFileName(fileUrlStr));
+//        url = new URL(fileUrlStr);
+//        httpUrl = (HttpURLConnection) url.openConnection();
+//        httpUrl.connect();
+        bis = new BufferedInputStream(inputStream);
+        fos = new FileOutputStream(fileName);
+        int i = 1;
+        while ((size = bis.read(buf)) != -1) {
+            fos.write(buf, 0, size);
+            System.out.println(i++ + "  size:" + size);
+        }
+
+        fos.close();
+        bis.close();
+        httpUrl.disconnect();
+    }
+
 
     public static void saveToFileV1(FileUrl fileUrl, String fileName) throws IOException {
         String destUrl = getQinKanUrl(fileUrl.getUrl());
