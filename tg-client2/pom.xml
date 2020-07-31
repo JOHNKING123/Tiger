@@ -16,8 +16,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<!-- 爬虫 -->
+		<webmagic.version>0.7.3</webmagic.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.zhengcq</groupId>
@@ -79,7 +80,40 @@
 			<artifactId>spring-cloud-starter-oauth2</artifactId>
 		</dependency>
 
-	</dependencies>
+
+		<!-- 爬虫 ######## Begin  -->
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-core</artifactId>
+			<version>${webmagic.version}</version>
+
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-extension</artifactId>
+			<version>${webmagic.version}</version>
+
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>
