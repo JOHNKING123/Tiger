@@ -324,7 +324,7 @@ public class TestSpider {
                             filePoolExecutor.execute(() -> {
                                 try {
                                     System.out.println("deal file " + j);
-                                    saveToFileV2(fileUrl, "F:\\ebook\\caimoge\\");
+                                    saveToFileV2(fileUrl, "E:\\ebook\\caimoge\\");
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -343,21 +343,27 @@ public class TestSpider {
             }
         });
 
-        for (int i = 1; i<= 58710;i++) {
+        for (int i = 16211; i<= 58710;i++) {
             String tartUrl =  "https://www.caimoge.net/down/all/" + i ;
+
             FileUrl fileUrl = new FileUrl();
             fileUrl.setUrl(tartUrl);
-            fileUrlQueue.add(fileUrl);
-        }
-        thread.start();
-        while (!fileUrlQueue.isEmpty() || filePoolExecutor.getTaskCount() != 0) {
-            System.out.println("fileUrl dealing fileUrlQueue:" + fileUrlQueue.size() + ",   filePool:" + filePoolExecutor.getTaskCount());
             try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
+                saveToFileV2(fileUrl, "F:\\ebook\\caimoge\\");
+            } catch (IOException e) {
                 e.printStackTrace();
             }
+//            fileUrlQueue.add(fileUrl);
         }
+//        thread.start();
+//        while (!fileUrlQueue.isEmpty() || filePoolExecutor.getTaskCount() != 0) {
+//            System.out.println("fileUrl dealing fileUrlQueue:" + fileUrlQueue.size() + ",   filePool:" + filePoolExecutor.getTaskCount());
+//            try {
+//                Thread.sleep(3000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
     }
 
@@ -469,7 +475,9 @@ public class TestSpider {
 //        httpUrl.setRequestProperty("accept-encoding", "gzip, deflate, br");
 //        httpUrl.setRequestProperty("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
 //        httpUrl.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36");
+        System.out.println("connect start");
         httpUrl.connect();
+        System.out.println("connect end");
         InputStream inputStream = null;
         try {
             inputStream =  httpUrl.getInputStream();

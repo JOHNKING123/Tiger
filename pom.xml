@@ -21,6 +21,7 @@
     <module>tg-common</module>
     <module>tg-uac</module>
     <module>base-demo</module>
+      <module>tg-message</module>
   </modules>
 
   <name>Tiger</name>

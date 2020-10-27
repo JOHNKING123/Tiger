@@ -13,4 +13,8 @@ public class TgClient2ApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void testSpider() {
+		System.out.println(1);
+	}
 }
