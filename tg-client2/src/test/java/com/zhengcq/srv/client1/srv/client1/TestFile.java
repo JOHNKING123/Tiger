@@ -20,7 +20,6 @@ public class TestFile {
         String filePath = "D:\\Documents\\Downloads\\Compressed\\zhidao_qa.json";
         LineIterator it = null;
         try {
-            System.out.println(1);
             File file = new File(filePath);
             System.out.println(3);
            it = FileUtils.lineIterator(file, "UTF-8");
