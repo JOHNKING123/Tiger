@@ -21,7 +21,7 @@ public class TestFile {
         LineIterator it = null;
         try {
             File file = new File(filePath);
-//            System.out.println(3);
+            System.out.println(3);
            it = FileUtils.lineIterator(file, "UTF-8");
            int i = 0;
             while (it.hasNext()) {
