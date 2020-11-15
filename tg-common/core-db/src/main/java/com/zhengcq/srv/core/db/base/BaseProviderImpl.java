@@ -1,10 +1,10 @@
 package com.zhengcq.srv.core.db.base;
 
 import com.baomidou.mybatisplus.plugins.Page;
-import com.zhengcq.srv.core.Constants;
-import com.zhengcq.srv.core.util.CacheUtil;
-import com.zhengcq.srv.core.util.InstanceUtil;
-import com.zhengcq.srv.core.utils.DataUtils;
+import com.zhengcq.srv.core.common.Constants;
+import com.zhengcq.srv.core.common.util.CacheUtil;
+import com.zhengcq.srv.core.common.util.InstanceUtil;
+import com.zhengcq.srv.core.common.utils.DataUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

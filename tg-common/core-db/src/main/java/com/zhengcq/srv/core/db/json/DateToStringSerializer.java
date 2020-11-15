@@ -3,7 +3,7 @@ package com.zhengcq.srv.core.db.json;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import com.zhengcq.srv.core.mq.srv.core.common.utils.DateUtils;
+import com.zhengcq.srv.core.common.utils.DateUtils;
 
 import java.io.IOException;
 import java.util.Date;
