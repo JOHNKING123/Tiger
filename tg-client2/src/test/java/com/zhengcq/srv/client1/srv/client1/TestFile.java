@@ -28,7 +28,8 @@ public class TestFile {
             System.out.println(6);
 			System.out.println(7);
 			System.out.println(8);
-            System.out.println(11);
+			System.out.println(9);
+ 			System.out.println(11);
            it = FileUtils.lineIterator(file, "UTF-8");
            int i = 0;
             while (it.hasNext()) {
