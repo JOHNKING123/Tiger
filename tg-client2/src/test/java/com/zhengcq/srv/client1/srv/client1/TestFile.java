@@ -22,6 +22,7 @@ public class TestFile {
         try {
             File file = new File(filePath);
             System.out.println(3);
+
             System.out.println(4);
            it = FileUtils.lineIterator(file, "UTF-8");
            int i = 0;
