@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * @Author: zhengcq
  * @Date: 2020/7/29
  */
-public class ZhishikooSpiderProcessor implements PageProcessor {
+public class Ebook23SpiderProcessor implements PageProcessor {
 
     /**
      * userAgentArray
@@ -126,13 +126,13 @@ public class ZhishikooSpiderProcessor implements PageProcessor {
     }
 
     private String isTargetUrl(String url) {
-        // https://book.zhishikoo.com/books/7319.html
-        boolean targetFlag =  Pattern.matches(".*/([\\d]*).html$", url);
+        // https://www.ebook23.com/thread-2294-1-1.html
+        boolean targetFlag =  Pattern.matches(".*/thread(-[\\d]*){3}[.]html$|thread(-[\\d]*){3}[.]html$", url);
         if (targetFlag) {
             if (url.startsWith("http")) {
                 return url;
             } else {
-                url = "https://book.zhishikoo.com" + url;
+                url = "https://www.ebook23.com/" + url;
             }
             return url;
         } else  {
@@ -141,8 +141,8 @@ public class ZhishikooSpiderProcessor implements PageProcessor {
     }
 
     private String dirUrl(String url) {
-        // https://book.zhishikoo.com/books/category/jingyinglizhi/chenggonglizhi/siweiyuzhili
-        boolean dirFlag = Pattern.matches("^https://book.zhishikoo.com/book[s]{0,1}/.*$", url);
+        // https://www.ebook23.com/forum/49/1.html
+        boolean dirFlag = Pattern.matches("^https://www.ebook23.com/forum/.*$", url);
         if (dirFlag) {
             return url;
         }

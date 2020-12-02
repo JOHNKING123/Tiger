@@ -102,7 +102,7 @@ public class SendMailServiceImpl {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.MONTH, month);
                 calendar.set(Calendar.WEEK_OF_MONTH, week);
-                calendar.set(Calendar.DAY_OF_WEEK, weekDay);
+                calendar.set(Calendar.DAY_OF_WEEK, weekDay + 1);
                 int day = calendar.get(Calendar.WEEK_OF_MONTH);
                 String msg = SolarUtil.WEEK_FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(0, month, day);

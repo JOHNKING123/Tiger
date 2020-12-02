@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * @Author: zhengcq
  * @Date: 2020/7/29
  */
-public class AibooksSpiderProcessor implements PageProcessor {
+public class ZhishikooSpiderProcessor implements PageProcessor {
 
     /**
      * userAgentArray
@@ -61,20 +61,30 @@ public class AibooksSpiderProcessor implements PageProcessor {
                 }
             }
             contentBuilder.append("\n");
-            List<String> wpUrls = page.getHtml().xpath("//[@class='dltable']//a/@href").nodes().stream().map(vo -> vo.toString()).collect(Collectors.toList());
-            if (wpUrls != null && wpUrls.size() > 0) {
-                for (String tmp : wpUrls) {
+            contents = page.getHtml().xpath("//[@class='article-content']//div/a/text()")
+                    .nodes().stream().map(vo -> vo.toString()).collect(Collectors.toList());
+            if (contents != null && contents.size() > 0) {
+                for (String tmp : contents) {
                     contentBuilder.append(tmp + "\n");
                 }
             }
             contentBuilder.append("\n");
-            String codeStr = page.getHtml().xpath("//[@class='alert alert-success']/text()").toString();
-            if (codeStr != null  && !codeStr.equals("")) {
-                contentBuilder.append(codeStr);
+            String urlStr = page.getHtml().xpath("//[@class='article-content']//div/a/text()").toString();
+            if (urlStr != null  && !urlStr.equals("")) {
+                contentBuilder.append(urlStr);
+            }
+            contents = page.getHtml().xpath("//[@class='article-content']//div/text()")
+                    .nodes().stream().map(vo -> vo.toString()).collect(Collectors.toList());
+            if (contents != null && contents.size() > 0) {
+                for (String tmp : contents) {
+                    contentBuilder.append(tmp + "\n");
+                }
             }
 
+            contentBuilder.append("\n");
+
             TestSpider.FileUrl  fileUrlVo = new TestSpider.FileUrl();
-            String name = page.getHtml().xpath("//[@class='article-title']/a/text()").toString();
+            String name = page.getHtml().xpath("//[@class='article-title']/text()").toString();
             fileUrlVo.setName(name);
             fileUrlVo.setContent(contentBuilder.toString());
             TestSpider.fileUrlQueue.add(fileUrlVo);
@@ -116,12 +126,13 @@ public class AibooksSpiderProcessor implements PageProcessor {
     }
 
     private String isTargetUrl(String url) {
+        // https://book.zhishikoo.com/books/7319.html
         boolean targetFlag =  Pattern.matches(".*/([\\d]*).html$", url);
         if (targetFlag) {
             if (url.startsWith("http")) {
                 return url;
             } else {
-                url = "https://www.aibooks.cc" + url;
+                url = "https://book.zhishikoo.com" + url;
             }
             return url;
         } else  {
@@ -130,7 +141,8 @@ public class AibooksSpiderProcessor implements PageProcessor {
     }
 
     private String dirUrl(String url) {
-        boolean dirFlag = Pattern.matches("^https://www.aibooks.cc/book[s]{0,1}/.*$", url);
+        // https://book.zhishikoo.com/books/category/jingyinglizhi/chenggonglizhi/siweiyuzhili
+        boolean dirFlag = Pattern.matches("^https://book.zhishikoo.com/book[s]{0,1}/.*$", url);
         if (dirFlag) {
             return url;
         }

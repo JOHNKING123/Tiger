@@ -367,6 +367,91 @@ public class TestSpider {
 
     }
 
+
+
+    @Test
+    public void testSpiderZhishikooBook() {
+        String urlTmp = "https://book.zhishikoo.com/";
+        dirUrlSet.add(urlTmp);
+        dirUrlQueue.add(urlTmp);
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
+                TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
+        ThreadPoolExecutor filePoolExecutor =  new ThreadPoolExecutor(10, Integer.MAX_VALUE, 10,
+                TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int i = 0;
+                while (true) {
+                    try {
+                        while (!fileUrlQueue.isEmpty()) {
+                            FileUrl fileUrl = fileUrlQueue.remove();
+                            int j = i++;
+                            filePoolExecutor.execute(() -> {
+                                try {
+                                    System.out.println("deal file " + j);
+                                    saveZhishikooBbookContent(fileUrl, "F:\\ebook\\zhishikoo\\");
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            });
+                        }
+                    } catch (Exception e) {
+                        System.out.println("deal file error");
+                    }
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        thread.start();
+        while (!dirUrlQueue.isEmpty() || !targetUrlQueue.isEmpty()) {
+            if (dirUrlQueue.isEmpty()) {
+                System.out.println("dirUrlQueue is empty");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                continue;
+            }
+            String url = "";
+            try {
+                synchronized (dirUrlQueue) {
+                    url = dirUrlQueue.remove();
+                }
+            } catch (Exception e) {
+                System.out.println("dir remove ex: size:" + dirUrlQueue.size());
+                continue;
+            }
+
+            Spider.create(new ZhishikooSpiderProcessor()).addUrl(url).thread(1).run();
+
+            if (!targetUrlQueue.isEmpty()) {
+                while (!targetUrlQueue.isEmpty()) {
+                    String tartUrl =  targetUrlQueue.remove();
+                    poolExecutor.execute(() ->{
+                        System.out.println(tartUrl);
+                        Spider.create(new ZhishikooSpiderProcessor()).addUrl(tartUrl).thread(1).run();
+                    });
+                }
+            }
+        }
+        while (!fileUrlQueue.isEmpty() || filePoolExecutor.getTaskCount() != 0) {
+            System.out.println("fileUrl dealing fileUrlQueue:" + fileUrlQueue.size() + ",   filePool:" + filePoolExecutor.getTaskCount());
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
     @Test
     public void testDownLoadFile() {
         String url = "https://www.caimoge.net/down/all/55763";
@@ -650,6 +735,22 @@ public class TestSpider {
            e.printStackTrace();
        }
    }
+
+
+    public void saveZhishikooBbookContent(FileUrl fileUrl, String fileName) {
+        try {
+            File dir = new File(fileName);
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            fileName = fileName + fileUrl.getName() + ".txt";
+            FileOutputStream fos = new FileOutputStream(fileName);
+            fos.write(fileUrl.getContent().getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
    @Test
    public void testTextFile() {
