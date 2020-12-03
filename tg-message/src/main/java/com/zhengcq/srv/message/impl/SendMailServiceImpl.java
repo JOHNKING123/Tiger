@@ -45,8 +45,12 @@ public class SendMailServiceImpl {
                 if (tmpStrs.length >= 5) {
                     dayNote = Integer.parseInt(tmpStrs[4]);
                 }
+                String userEmail = null;
+                if (tmpStrs.length >= 6) {
+                    userEmail = tmpStrs[5];
+                }
                 int dayDiff = getDiffDay(flag, month, day);
-                notifyEmail(dayDiff, msg, dayNote);
+                notifyEmail(dayDiff, msg, dayNote, userEmail);
                 line = bufferedReader.readLine();
             }
             bufferedReader.close();
@@ -64,7 +68,7 @@ public class SendMailServiceImpl {
                 int day = Integer.parseInt(tmpStrs[1]);
                 String msg = LunarUtil.FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(1, month, day);
-                notifyEmail(dayDiff, msg, null);
+                notifyEmail(dayDiff, msg, null, null);
             }
 
 
@@ -86,7 +90,7 @@ public class SendMailServiceImpl {
                 int day = Integer.parseInt(tmpStrs[1]);
                 String msg = SolarUtil.FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(0, month, day);
-                notifyEmail(dayDiff, msg, null);
+                notifyEmail(dayDiff, msg, null, null);
             }
 
             // 西方节日，周概念的节日
@@ -106,7 +110,7 @@ public class SendMailServiceImpl {
                 int day = calendar.get(Calendar.WEEK_OF_MONTH);
                 String msg = SolarUtil.WEEK_FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(0, month, day);
-                notifyEmail(dayDiff, msg, null);
+                notifyEmail(dayDiff, msg, null, null);
             }
 
         } catch (Exception e) {
@@ -114,8 +118,11 @@ public class SendMailServiceImpl {
         }
     }
 
-    public static void notifyEmail(int dayDiff, String msg, Integer dayNote) throws Exception {
+    public static void notifyEmail(int dayDiff, String msg, Integer dayNote, String userEmail) throws Exception {
         String email = "1318692162@qq.com";
+        if (userEmail != null && !userEmail.equals("")) {
+            email = userEmail;
+        }
         String title = "test";
         String content = "test";
         boolean notifyFlag = notify(dayDiff, dayNote);
