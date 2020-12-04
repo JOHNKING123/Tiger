@@ -104,10 +104,10 @@ public class SendMailServiceImpl {
                 int week = Integer.parseInt(tmpStrs[1]);
                 int weekDay = Integer.parseInt(tmpStrs[2]);
                 Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.MONTH, month - 1);
                 calendar.set(Calendar.WEEK_OF_MONTH, week);
                 calendar.set(Calendar.DAY_OF_WEEK, weekDay + 1);
-                int day = calendar.get(Calendar.WEEK_OF_MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
                 String msg = SolarUtil.WEEK_FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(0, month, day);
                 notifyEmail(dayDiff, msg, null, null);
@@ -168,7 +168,7 @@ public class SendMailServiceImpl {
         } else {
             // 新历
 
-            int curMonth = calendar.get(Calendar.MONTH);
+            int curMonth = calendar.get(Calendar.MONTH) + 1;
             int curDay = calendar.get(Calendar.DAY_OF_MONTH);
             int curDays = calendar.get(Calendar.DAY_OF_YEAR);
             if (month == curMonth && day == curDay) {
