@@ -25,8 +25,8 @@ public class TestController extends BaseController implements TestService {
     @Value("${userName}")
     private String userName;
 
-    @Autowired
-    private RabbitMqProducer rabbitMqProducer;
+//    @Autowired
+//    private RabbitMqProducer rabbitMqProducer;
 
     @Autowired
     private UserService userService;
@@ -47,7 +47,7 @@ public class TestController extends BaseController implements TestService {
     public JsonResult testMq(@RequestParam("msg")String msg){
 
 
-        rabbitMqProducer.Publish(msg.getBytes(),"testMsg","testMsg",0);
+//        rabbitMqProducer.Publish(msg.getBytes(),"testMsg","testMsg",0);
         return JsonResult.ok(true);
     }
 

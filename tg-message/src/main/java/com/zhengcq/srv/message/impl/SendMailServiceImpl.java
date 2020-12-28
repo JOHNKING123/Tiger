@@ -175,7 +175,7 @@ public class SendMailServiceImpl {
                 return 0;
             }
             Calendar tmpCal = Calendar.getInstance();
-            tmpCal.set(Calendar.MONTH, month);
+            tmpCal.set(Calendar.MONTH, month - 1);
             tmpCal.set(Calendar.DAY_OF_MONTH, day);
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
             return curDays - days;

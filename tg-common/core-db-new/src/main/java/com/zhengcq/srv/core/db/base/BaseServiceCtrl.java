@@ -4,7 +4,7 @@ package com.zhengcq.srv.core.db.base;//package com.zhengcq.srv.core.db.base;
 //import com.zhengcq.srv.core.Constants;
 //import com.zhengcq.srv.core.support.Assert;
 //import com.zhengcq.srv.core.util.CacheUtil;
-//import com.zhengcq.srv.core.utils.web.WebUtils;
+//import com.zhengcq.srv.core.common.utils.web.WebUtils;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 //
