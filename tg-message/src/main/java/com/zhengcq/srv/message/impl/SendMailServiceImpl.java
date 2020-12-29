@@ -7,6 +7,7 @@ import com.zhengcq.srv.message.util.SendmailUtil;
 
 import java.io.*;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -23,8 +24,8 @@ public class SendMailServiceImpl {
     public static Lunar lunar = new Lunar();
     public static void main(String[] args) {
 
-        File birthFile = new File("D://birth.txt");
-//        File birthFile = new File("/opt/birth.txt");
+//        File birthFile = new File("D://birth.txt");
+        File birthFile = new File("/opt/birth.txt");
         try {
             // 生日通知
             FileReader reader = new FileReader(birthFile);
@@ -166,6 +167,10 @@ public class SendMailServiceImpl {
             Calendar tmpCal = tmpLun.getSolar().getCalendar();
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
             dayDiff =  curDays - days;
+            if (dayDiff > 0) {
+                tmpCal.set(Calendar.YEAR, calendar.get(Calendar.YEAR) + 1);
+                dayDiff = getDistanceOfTwoDate(tmpCal.getTime(), calendar.getTime()).intValue();
+            }
         } else {
             // 新历
 
@@ -180,10 +185,25 @@ public class SendMailServiceImpl {
             tmpCal.set(Calendar.DAY_OF_MONTH, day);
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
             dayDiff =  curDays - days;
-        }
-        if (dayDiff >= 350) {
-            return dayDiff - 366;
+            if (dayDiff > 0) {
+                tmpCal.set(Calendar.YEAR, calendar.get(Calendar.YEAR) + 1);
+                dayDiff = getDistanceOfTwoDate(tmpCal.getTime(), calendar.getTime()).intValue();
+            }
         }
         return dayDiff;
+    }
+
+
+    /**
+     * 获取两个日期之间的天数
+     *
+     * @param before
+     * @param after
+     * @return
+     */
+    public static Long getDistanceOfTwoDate(Date before, Date after) {
+        long beforeTime = before.getTime();
+        long afterTime = after.getTime();
+        return (afterTime - beforeTime) / (1000 * 60 * 60 * 24);
     }
 }
