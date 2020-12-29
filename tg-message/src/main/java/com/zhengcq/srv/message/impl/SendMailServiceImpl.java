@@ -23,8 +23,8 @@ public class SendMailServiceImpl {
     public static Lunar lunar = new Lunar();
     public static void main(String[] args) {
 
-//        File birthFile = new File("D://birth.txt");
-        File birthFile = new File("/opt/birth.txt");
+        File birthFile = new File("D://birth.txt");
+//        File birthFile = new File("/opt/birth.txt");
         try {
             // 生日通知
             FileReader reader = new FileReader(birthFile);
@@ -153,6 +153,7 @@ public class SendMailServiceImpl {
     }
 
     public static int getDiffDay(int flag, int month, int day) {
+        int dayDiff = 0;
         if (flag > 0) {
             // 农历
             int curMonth = lunar.getMonth();
@@ -164,7 +165,7 @@ public class SendMailServiceImpl {
             Lunar tmpLun = new Lunar(lunar.getYear(), month, day);
             Calendar tmpCal = tmpLun.getSolar().getCalendar();
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
-            return curDays - days;
+            dayDiff =  curDays - days;
         } else {
             // 新历
 
@@ -178,7 +179,11 @@ public class SendMailServiceImpl {
             tmpCal.set(Calendar.MONTH, month - 1);
             tmpCal.set(Calendar.DAY_OF_MONTH, day);
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
-            return curDays - days;
+            dayDiff =  curDays - days;
         }
+        if (dayDiff >= 350) {
+            return dayDiff - 366;
+        }
+        return dayDiff;
     }
 }
