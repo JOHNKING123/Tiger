@@ -160,11 +160,17 @@ public class SendMailServiceImpl {
             int curMonth = lunar.getMonth();
             int curDay = lunar.getDay();
             int curDays = calendar.get(Calendar.DAY_OF_YEAR);
+            int curYear = calendar.get(Calendar.YEAR);
             if (month == curMonth && day == curDay) {
                 return 0;
             }
             Lunar tmpLun = new Lunar(lunar.getYear(), month, day);
             Calendar tmpCal = tmpLun.getSolar().getCalendar();
+            int tmpYear = tmpCal.get(Calendar.YEAR);
+            if (curYear != tmpYear && curYear == (tmpYear + 1)) {
+                tmpLun = new Lunar(lunar.getYear() + 1, month, day);
+                tmpCal = tmpLun.getSolar().getCalendar();
+            }
             int days = tmpCal.get(Calendar.DAY_OF_YEAR);
             dayDiff =  curDays - days;
             if (dayDiff > 0) {
