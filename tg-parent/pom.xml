@@ -24,7 +24,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <logstash-logback-encode.version>4.11</logstash-logback-encode.version>
-        <fastjson.version>1.2.23</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
 
         <!-- mybatis版本号 -->
         <mybatis.version>3.4.2</mybatis.version>
