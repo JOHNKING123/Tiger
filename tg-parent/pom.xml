@@ -39,7 +39,7 @@
 
         <redisson.version>2.7.2</redisson.version>
 
-        <poi.version>3.9</poi.version>
+        <poi.version>4.1.1</poi.version>
         <pinyin4j.version>2.5.1</pinyin4j.version>
 
         <!--aspectj 1.8.10有性能问题，升级到1.8.13-->
