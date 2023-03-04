@@ -26,7 +26,7 @@ public class SendmailUtil {
 
     //发件人邮箱密码（授权码）
     //在开启SMTP服务时会获取到一个授权码，把授权码填在这里
-    private static String myEmailPassword = "xxxxxxx";
+    private static String myEmailPassword = "";
 
     /**
      * 邮件单发（自由编辑短信，并发送，适用于私信）
@@ -98,9 +98,11 @@ public class SendmailUtil {
         //connect(host, user, password)
         transport.connect( myEmailSMTPHost, myEmailAccount, myEmailPassword);
 
+
         //发送邮件
         transport.sendMessage(msg, new Address[] { new InternetAddress(toEmailAddress) });
 
         transport.close();
+
     }
 }
