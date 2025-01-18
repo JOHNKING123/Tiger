@@ -40,7 +40,7 @@ public class SendMailServiceImpl {
          // 1. birth day notify
         BirthDateNotify();
         // 2. Gpt question
-        GptQuestion();
+//        GptQuestion();
 
     }
     public static String getCurrentDate() {
@@ -117,7 +117,7 @@ public class SendMailServiceImpl {
     }
 
     public static void BirthDateNotify() {
-        //        File birthFile = new File("D://birth.txt");
+//          File birthFile = new File("D://birth.txt");
         File birthFile = new File("/opt/birth.txt");
 
 
@@ -201,12 +201,23 @@ public class SendMailServiceImpl {
                 int weekDay = Integer.parseInt(tmpStrs[2]);
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.MONTH, month - 1);
-                calendar.set(Calendar.WEEK_OF_MONTH, week);
-                calendar.set(Calendar.DAY_OF_WEEK, weekDay + 1);
+                int tmpWeek = 0;
+                for (int i = 1; i<31; i++) {
+                    calendar.set(Calendar.DAY_OF_MONTH, i);
+                    int tmpWeekDay = calendar.get(Calendar.DAY_OF_WEEK);
+                    if (tmpWeekDay == weekDay + 1) {
+                        tmpWeek++;
+                    }
+                    if (tmpWeek == week) {
+                        break;
+                    }
+                }
+
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
                 String msg = SolarUtil.WEEK_FESTIVAL.get(festival);
                 int dayDiff = getDiffDay(0, month, day);
                 notifyEmail(dayDiff, msg, null, null);
+
             }
 
         } catch (Exception e) {
@@ -250,38 +261,48 @@ public class SendMailServiceImpl {
     }
 
     public static int getDiffDay(int flag, int month, int day) {
-        if (flag > 0) {
-            // 农历
-            int curMonth = lunar.getMonth();
-            int curDay = lunar.getDay();
-            int curDays = calendar.get(Calendar.DAY_OF_YEAR);
-            if (month == curMonth && day == curDay) {
-                return 0;
-            }
-            int yearDays = calendar.getActualMaximum(Calendar.DAY_OF_YEAR);
-            System.out.println(yearDays);
-            Lunar tmpLun = new Lunar(lunar.getYear(), month, day);
-            Calendar tmpCal = tmpLun.getSolar().getCalendar();
-            int days = tmpCal.get(Calendar.DAY_OF_YEAR);
-            if (tmpCal.get(Calendar.YEAR) > calendar.get(Calendar.YEAR)) {
-                days += yearDays;
-            }
+        try {
+            if (flag > 0) {
+                // 农历
+                int curMonth = lunar.getMonth();
+                int curDay = lunar.getDay();
+                int curDays = calendar.get(Calendar.DAY_OF_YEAR);
+                if (month == curMonth && day == curDay) {
+                    return 0;
+                }
+                int yearDays = calendar.getActualMaximum(Calendar.DAY_OF_YEAR);
+                System.out.println(yearDays);
+                int lunarYear = lunar.getYear();
+                int lunarMonth = lunar.getMonth();
+                if (lunarMonth > month) {
+                    lunarYear++;
+                }
+                Lunar tmpLun = new Lunar(lunarYear, month, day);
+                Calendar tmpCal = tmpLun.getSolar().getCalendar();
+                int days = tmpCal.get(Calendar.DAY_OF_YEAR);
+                if (tmpCal.get(Calendar.YEAR) > calendar.get(Calendar.YEAR)) {
+                    days += yearDays;
+                }
 
-            return curDays - days;
-        } else {
-            // 新历
+                return curDays - days;
+            } else {
+                // 新历
 
-            int curMonth = calendar.get(Calendar.MONTH) + 1;
-            int curDay = calendar.get(Calendar.DAY_OF_MONTH);
-            int curDays = calendar.get(Calendar.DAY_OF_YEAR);
-            if (month == curMonth && day == curDay) {
-                return 0;
+                int curMonth = calendar.get(Calendar.MONTH) + 1;
+                int curDay = calendar.get(Calendar.DAY_OF_MONTH);
+                int curDays = calendar.get(Calendar.DAY_OF_YEAR);
+                if (month == curMonth && day == curDay) {
+                    return 0;
+                }
+                Calendar tmpCal = Calendar.getInstance();
+                tmpCal.set(Calendar.MONTH, month-1);
+                tmpCal.set(Calendar.DAY_OF_MONTH, day);
+                int days = tmpCal.get(Calendar.DAY_OF_YEAR);
+                return curDays - days;
             }
-            Calendar tmpCal = Calendar.getInstance();
-            tmpCal.set(Calendar.MONTH, month);
-            tmpCal.set(Calendar.DAY_OF_MONTH, day);
-            int days = tmpCal.get(Calendar.DAY_OF_YEAR);
-            return curDays - days;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+       return  -1;
     }
 }

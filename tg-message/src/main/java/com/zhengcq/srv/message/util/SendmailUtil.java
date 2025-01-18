@@ -46,8 +46,6 @@ public class SendmailUtil {
         // 发送服务器需要身份验证
         props.setProperty("mail.smtp.auth", "true");
 
-        // 端口号
-        props.put("mail.smtp.port", 465);
 
         // 设置邮件服务器主机名
         props.setProperty("mail.smtp.host", myEmailSMTPHost);
@@ -59,9 +57,14 @@ public class SendmailUtil {
 //        MailSSLSocketFactory sf = new MailSSLSocketFactory();
 //        sf.setTrustAllHosts(true);
 
-        //设置是否使用ssl安全连接（一般都使用）
-        props.put("mail.smtp.ssl.enable", "true");
+        //设置是否使用ssl安全连接（一般都使用
+        // 端口号
+//        props.put("mail.smtp.port", 465);
+//        props.put("mail.smtp.ssl.enable", "true");
 //        props.put("mail.smtp.ssl.socketFactory", sf);
+
+        props.put("mail.smtp.port", "587"); // QQ 邮箱的 TLS 端口
+        props.put("mail.smtp.starttls.enable", "true"); // 启用 TLS
 
         //创建会话
         Session session = Session.getInstance(props);
