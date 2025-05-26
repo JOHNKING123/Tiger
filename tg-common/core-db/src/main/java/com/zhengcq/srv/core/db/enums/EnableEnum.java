@@ -2,7 +2,7 @@ package com.zhengcq.srv.core.db.enums;
 
 
 
-import com.zhengcq.srv.core.mq.srv.core.common.baseEnums.BaseEnums;
+import com.zhengcq.srv.core.common.baseEnums.BaseEnums;
 
 import java.io.Serializable;
 

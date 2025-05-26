@@ -27,8 +27,8 @@ import org.springframework.context.annotation.Configuration;
  * Created by clude on 8/24/18.
  */
 
-@Slf4j
-@Configuration
+//@Slf4j
+//@Configuration
 public class QueueConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(QueueConfig.class);
