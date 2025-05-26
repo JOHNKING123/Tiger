@@ -117,9 +117,9 @@ public class SendMailServiceImpl {
     }
 
     public static void BirthDateNotify() {
-//          File birthFile = new File("D://birth.txt");
-        File birthFile = new File("/opt/birth.txt");
-
+          File birthFile = new File("D://birth.txt");
+//        File birthFile = new File("/opt/birth.txt");
+//
 
         try {
             // 生日通知
@@ -226,6 +226,7 @@ public class SendMailServiceImpl {
     }
 
     public static void notifyEmail(int dayDiff, String msg, Integer dayNote, String userEmail) throws Exception {
+        System.out.println(dayDiff);
         String email = "1318692162@qq.com";
         if (userEmail != null && !userEmail.equals("")) {
             email = userEmail;
@@ -264,6 +265,15 @@ public class SendMailServiceImpl {
         try {
             if (flag > 0) {
                 // 农历
+                int lunarYear = lunar.getYear();
+                int lunarMonth = lunar.getMonth();
+                if (lunarMonth > month) {
+                    lunarYear++;
+                }
+                int lunarMonthDays = LunarUtil.getDaysOfMonth(lunarYear, lunarMonth);
+                if (day > lunarMonthDays) {
+                    return -1;
+                }
                 int curMonth = lunar.getMonth();
                 int curDay = lunar.getDay();
                 int curDays = calendar.get(Calendar.DAY_OF_YEAR);
@@ -271,12 +281,8 @@ public class SendMailServiceImpl {
                     return 0;
                 }
                 int yearDays = calendar.getActualMaximum(Calendar.DAY_OF_YEAR);
-                System.out.println(yearDays);
-                int lunarYear = lunar.getYear();
-                int lunarMonth = lunar.getMonth();
-                if (lunarMonth > month) {
-                    lunarYear++;
-                }
+
+
                 Lunar tmpLun = new Lunar(lunarYear, month, day);
                 Calendar tmpCal = tmpLun.getSolar().getCalendar();
                 int days = tmpCal.get(Calendar.DAY_OF_YEAR);
